@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Web Wonder</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="./css/main.min.css" />
+   </head>
+   <body>
+      <header class="header is-hidden">
+         <div class="container">
+            <a href="./" class="logo">
+               <picture>
+                  <source srcset="./img/logo.webp" type="image/webp" />
+                  <img src="./img/logo.png" alt="Логотип Web Wonder" class="img-position" />
+               </picture>
+            </a>
+            <button
+               type="button"
+               class="header__button-mobail"
+               aria-controls="menu-container"
+               aria-expanded="true"
+            >
+               <svg
+                  class="header__icon"
+                  width="30"
+                  height="30"
+                  aria-label="Переключатель мобильного меню"
+               >
+                  <use class="header__icon-menu" href="./img/symbol-defs.svg#menu"></use>
+                  <use class="header__icon-cross" href="./img/symbol-defs.svg#cross"></use>
+               </svg>
+            </button>
+            <div class="header__menu-mobail" id="menu-container">
+               <nav class="nav">
+                  <ul class="nav__list">
+                     <li class="nav__item"><a href="" class="nav__link">Послуги</a></li>
+                     <li class="nav__item"><a href="" class="nav__link">Вартість</a></li>
+                     <li class="nav__item"><a href="" class="nav__link">Портфоліо</a></li>
+                     <li class="nav__item"><a href="" class="nav__link">Про нас</a></li>
+                  </ul>
+
+                  <a href="" class="consultation">Консультація</a>
+               </nav>
+            </div>
+         </div>
+      </header>
+   </body>
+</html>

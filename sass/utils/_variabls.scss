@@ -1,0 +1,21 @@
+$colors: (
+   'global-bacground': #ffffff,
+   'primary-color': #3a5b66,
+   'secondary-color': #ff9933,
+   'white-text': #ffffff,
+   'secondary-text': #0a5b66,
+   'accent': #27454f,
+);
+
+@function getColor($key) {
+   @return map-get($colors, $key);
+}
+
+// --------- ШРИФТЫ -----
+$fontPrimery: 'Comfortaa', cursive, Arial, sans-serif;
+
+// кубик + время анимации
+$timing-function-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// стандарные отсутпы
+$card-set-gap: 20px;

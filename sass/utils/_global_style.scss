@@ -1,0 +1,90 @@
+/* Глобальные стили */
+body {
+   background-color: getColor('global-bacground');
+   color: getColor('primary-text');
+
+   font-family: $fontPrimery;
+   letter-spacing: 0.03em;
+
+   @media screen and (max-width: 767px) {
+      position: relative;
+   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+//  -------- ПЛЕЙСХОЛДЕРЫ -------
+// ------- Загловки разделов ------
+%title-text {
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 1.23;
+   text-align: center;
+}
+
+/* сброс отсутпов и точек в списках */
+%padding-list {
+   padding-left: 0;
+   list-style-type: none;
+}
+
+/* Скрывет текст */
+%text-delete {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+/* глобальные параметры картинок */
+.img-position {
+   display: block;
+   max-width: 100%;
+}
+
+// ------ ГЛОБАЛЬНЫЕ ПАДИНГИ ДЛЯ СЕКЦИЙ
+.section {
+   padding-top: 60px;
+   padding-bottom: 60px;
+
+   @media screen and (min-width: $desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+   }
+}
+
+.container {
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-left: auto;
+   margin-right: auto;
+   outline: 1px solid red;
+
+   @media screen and (min-width: $mobail) {
+      width: 480px;
+   }
+   @media screen and (min-width: $tablet) {
+      width: 768px;
+   }
+
+   @media screen and (min-width: $desktop) {
+      width: 1200px;
+   }
+}

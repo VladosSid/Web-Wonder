@@ -1,0 +1,102 @@
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   padding-top: 10px;
+   padding-bottom: 10px;
+
+   // background-color: getColor('primary-color');
+}
+// ----- Logo -----
+.logo {
+   width: 170px;
+   height: 61px;
+}
+
+.header {
+   @include positioning;
+
+   background-color: getColor('primary-color');
+   // ----- мобильное меню ------
+   // ----- кнопка меню --------
+   &__button-mobail {
+      background: none;
+      border: none;
+      padding: 0;
+   }
+
+   // ------ icon -----
+   &__icon {
+      fill: getColor('white-text');
+      transition: fill $timing-function-cubic;
+   }
+
+   &__icon:hover,
+   &__icon:focus {
+      fill: getColor('secondary-color');
+   }
+
+   &__button-mobail.is-hidden .header__icon-menu {
+      display: none;
+   }
+
+   &__icon-cross {
+      display: none;
+   }
+
+   &__button-mobail.is-hidden .header__icon-cross {
+      display: block;
+   }
+
+   // ----- menu -----
+   &__menu-mobail {
+      display: none;
+
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100vw;
+      height: calc(100vh - 81px);
+
+      justify-content: center;
+      align-items: center;
+
+      background-color: getColor('primary-color');
+   }
+
+   &.is-hidden .header__menu-mobail {
+      display: flex;
+   }
+}
+// ----- navigation -----
+.nav__list {
+   @extend %padding-list;
+   margin-bottom: 50px;
+}
+
+.nav__item {
+   font-size: 16px;
+   letter-spacing: 0.03em;
+   line-height: 1.17;
+
+   text-align: center;
+   text-decoration: none;
+
+   &:not(:last-child) {
+      margin-bottom: $card-set-gap;
+   }
+}
+
+.nav__link {
+   text-decoration: none;
+
+   color: getColor('white-text');
+
+   transition: color $timing-function-cubic;
+
+   &:hover,
+   &:focus {
+      color: getColor('secondary-color');
+   }
+}
