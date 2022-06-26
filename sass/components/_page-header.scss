@@ -5,8 +5,6 @@
 
    padding-top: 10px;
    padding-bottom: 10px;
-
-   // background-color: getColor('primary-color');
 }
 // ----- Logo -----
 .logo {
@@ -68,35 +66,75 @@
    &.is-hidden .header__menu-mobail {
       display: flex;
    }
+
+   // &.is-hidden .nav__secondary-list {
+   //    display: block;
+   // }
 }
 // ----- navigation -----
-.nav__list {
-   @extend %padding-list;
-   margin-bottom: 50px;
-}
+.nav {
+   @include positioning;
 
-.nav__item {
-   font-size: 16px;
-   letter-spacing: 0.03em;
-   line-height: 1.17;
-
-   text-align: center;
-   text-decoration: none;
-
-   &:not(:last-child) {
-      margin-bottom: $card-set-gap;
+   &__list {
+      @extend %padding-list;
+      margin-bottom: 50px;
    }
-}
 
-.nav__link {
-   text-decoration: none;
+   &__item {
+      text-align: center;
 
-   color: getColor('white-text');
+      &:not(:last-child) {
+         margin-bottom: $card-set-gap;
+      }
 
-   transition: color $timing-function-cubic;
+      &--position {
+         @include positioning;
+      }
+   }
 
-   &:hover,
-   &:focus {
-      color: getColor('secondary-color');
+   &__link,
+   &__secondary-link {
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      line-height: 1.17;
+
+      text-decoration: none;
+
+      color: getColor('white-text');
+
+      transition: color $timing-function-cubic;
+
+      &:hover,
+      &:focus {
+         color: getColor('secondary-color');
+      }
+   }
+
+   &__open-secondary-menu {
+      fill: getColor('white-text');
+      transform: rotate(90deg);
+   }
+
+   &__open-secondary-menu {
+      fill: currentColor;
+   }
+
+   // ----- Вторичное меню -----
+   &__secondary-list {
+      @extend %padding-list;
+
+      display: none;
+
+      @include positioning;
+      top: 30px;
+      left: 0;
+   }
+
+   &.is-open .nav__secondary-list {
+      display: block;
+   }
+
+   &__secondary-item {
+      margin-bottom: 20px;
    }
 }

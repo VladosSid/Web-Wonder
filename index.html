@@ -46,9 +46,28 @@
                </svg>
             </button>
             <div class="header__menu-mobail" id="menu-container">
-               <nav class="nav">
+               <nav class="nav is-open">
                   <ul class="nav__list">
-                     <li class="nav__item"><a href="" class="nav__link">Послуги</a></li>
+                     <li class="nav__item nav__item--position">
+                        <a href="" class="nav__link nav__link--secondary"
+                           >Послуги
+                           <svg width="10" height="10" class="nav__open-secondary-menu">
+                              <use href="./img/symbol-defs.svg#open-secondary-menu"></use>
+                           </svg>
+                        </a>
+
+                        <ul class="nav__secondary-list">
+                           <li class="nav__secondary-item">
+                              <a href="" class="nav__secondary-link">Створення лого</a>
+                           </li>
+                           <li class="nav__secondary-item">
+                              <a href="" class="nav__secondary-link">Розробка сайту</a>
+                           </li>
+                           <li class="nav__secondary-item">
+                              <a href="" class="nav__secondary-link">Просування сайту</a>
+                           </li>
+                        </ul>
+                     </li>
                      <li class="nav__item"><a href="" class="nav__link">Вартість</a></li>
                      <li class="nav__item"><a href="" class="nav__link">Портфоліо</a></li>
                      <li class="nav__item"><a href="" class="nav__link">Про нас</a></li>
