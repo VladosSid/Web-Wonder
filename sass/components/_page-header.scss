@@ -5,6 +5,29 @@
 
    padding-top: 10px;
    padding-bottom: 10px;
+
+   &::before {
+      content: '';
+      @include positioning(absolute);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 480px;
+      height: 1px;
+      background: linear-gradient(
+         90deg,
+         rgba(58, 91, 102, 1) 0%,
+         rgba(255, 153, 51, 1) 15%,
+         rgba(255, 153, 51, 1) 83%,
+         rgba(58, 91, 102, 1) 100%
+      );
+      @media screen and (min-width: 768px) {
+         width: 768px;
+      }
+      @media screen and (min-width: 1200px) {
+         width: 1200px;
+      }
+   }
 }
 // ----- Logo -----
 .logo {
@@ -51,7 +74,7 @@
    &__menu-mobail {
       display: none;
 
-      position: absolute;
+      @include positioning(absolute);
       left: 0;
       top: 100%;
       width: 100vw;
@@ -74,6 +97,10 @@
 // ----- navigation -----
 .nav {
    @include positioning;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
    &__list {
       @extend %padding-list;
@@ -94,7 +121,7 @@
 
    &__link,
    &__secondary-link {
-      font-size: 16px;
+      font-size: 19px;
       letter-spacing: 0.03em;
       line-height: 1.17;
 
@@ -110,9 +137,19 @@
       }
    }
 
+   &__link--secondary {
+      display: block;
+      margin-bottom: 20px;
+   }
+
    &__open-secondary-menu {
       fill: getColor('white-text');
       transform: rotate(90deg);
+      transition: transform $timing-function-cubic;
+   }
+
+   &.is-open .nav__open-secondary-menu {
+      transform: rotate(150deg);
    }
 
    &__open-secondary-menu {
@@ -124,8 +161,6 @@
       @extend %padding-list;
 
       display: none;
-
-      @include positioning;
       top: 30px;
       left: 0;
    }
@@ -137,4 +172,20 @@
    &__secondary-item {
       margin-bottom: 20px;
    }
+}
+
+// ------ Консультация ------
+.consultation {
+   padding-top: 9px;
+   padding-bottom: 9px;
+   padding-left: 35px;
+   padding-right: 35px;
+   line-height: 1.17;
+   font-size: 19px;
+   letter-spacing: 0.03em;
+   font-weight: 600;
+   text-decoration: none;
+   color: getColor('white-text');
+   border: 2px solid getColor('secondary-color');
+   border-radius: 8px;
 }
