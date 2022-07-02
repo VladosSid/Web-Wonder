@@ -71,14 +71,14 @@ p {
   }
 }
 
-.container {
+.header_box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.container::before {
+.header_box::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -89,12 +89,12 @@ p {
   background: linear-gradient(90deg, rgb(58, 91, 102) 0%, rgb(255, 153, 51) 15%, rgb(255, 153, 51) 83%, rgb(58, 91, 102) 100%);
 }
 @media screen and (min-width: 768px) {
-  .container::before {
+  .header_box::before {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container::before {
+  .header_box::before {
     width: 1200px;
   }
 }
@@ -135,6 +135,7 @@ p {
 .header__menu-mobail {
   display: flex;
   position: absolute;
+  z-index: 999;
   left: -100%;
   top: 100%;
   width: 100vw;
@@ -249,4 +250,126 @@ p {
   color: #ff9933;
   border-color: #ffffff;
   background-color: #27454f;
+}
+
+.primery {
+  background-color: #3a5b66;
+}
+.primery__position-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.primery__eyedropper {
+  position: absolute;
+  top: 70px;
+  left: 23px;
+  rotate: 23deg;
+  width: 20px;
+  height: 20px;
+}
+.primery__figma {
+  position: absolute;
+  top: 78px;
+  left: 156px;
+  rotate: -33deg;
+  width: 46px;
+  height: 46px;
+}
+.primery__code_tags {
+  position: absolute;
+  top: 125px;
+  left: 287px;
+  rotate: 33deg;
+  width: 23px;
+  height: 23px;
+}
+.primery__photoshop {
+  position: absolute;
+  top: 173px;
+  left: 57px;
+  rotate: -13deg;
+  width: 50px;
+  height: 50px;
+}
+.primery__adobe-illustrator {
+  position: absolute;
+  top: 32px;
+  right: 49px;
+  rotate: 13deg;
+  width: 35px;
+  height: 35px;
+}
+.primery__html {
+  position: absolute;
+  top: 194px;
+  right: 57px;
+  rotate: -33deg;
+  width: 50px;
+  height: 30px;
+}
+.primery__logo {
+  width: 278px;
+  height: 278px;
+  margin-bottom: 30px;
+}
+.primery__title {
+  display: block;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.primery__title-dynamic {
+  color: #ff9933;
+}
+.primery__codinghtml {
+  position: absolute;
+  bottom: 70px;
+  left: 23px;
+  rotate: 23deg;
+  width: 45px;
+  height: 45px;
+}
+.primery__aftere-ffects {
+  position: absolute;
+  bottom: 78px;
+  left: 156px;
+  rotate: -33deg;
+  width: 46px;
+  height: 46px;
+}
+.primery__color-palette {
+  position: absolute;
+  bottom: 125px;
+  left: 287px;
+  rotate: 33deg;
+  width: 23px;
+  height: 23px;
+}
+.primery__css {
+  position: absolute;
+  bottom: 173px;
+  left: 57px;
+  rotate: -13deg;
+  width: 25px;
+  height: 25px;
+}
+.primery__visual_studio {
+  position: absolute;
+  bottom: 32px;
+  right: 49px;
+  rotate: 13deg;
+  width: 35px;
+  height: 35px;
+}
+.primery__format_color {
+  position: absolute;
+  bottom: 194px;
+  right: 57px;
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=main.css.map */

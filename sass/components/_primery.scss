@@ -1,0 +1,155 @@
+.primery {
+   background-color: getColor('primary-color');
+   &__position-img {
+      @include positioning;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding-top: 200px;
+      padding-bottom: 200px;
+   }
+
+   // ---------- bg-image-top -------
+   &__eyedropper {
+      @include positioning(absolute);
+      top: 70px;
+      left: 23px;
+      rotate: 23deg;
+
+      width: 20px;
+      height: 20px;
+   }
+
+   &__figma {
+      @include positioning(absolute);
+      top: 78px;
+      left: 156px;
+      rotate: -33deg;
+
+      width: 46px;
+      height: 46px;
+   }
+
+   &__code_tags {
+      @include positioning(absolute);
+      top: 125px;
+      left: 287px;
+      rotate: 33deg;
+
+      width: 23px;
+      height: 23px;
+   }
+
+   &__photoshop {
+      @include positioning(absolute);
+      top: 173px;
+      left: 57px;
+      rotate: -13deg;
+
+      width: 50px;
+      height: 50px;
+   }
+
+   &__adobe-illustrator {
+      @include positioning(absolute);
+      top: 32px;
+      right: 49px;
+      rotate: 13deg;
+
+      width: 35px;
+      height: 35px;
+   }
+
+   &__html {
+      @include positioning(absolute);
+      top: 194px;
+      right: 57px;
+      rotate: -33deg;
+
+      width: 50px;
+      height: 30px;
+   }
+
+   // ---- logo and title
+   &__logo {
+      width: 278px;
+      height: 278px;
+
+      margin-bottom: 30px;
+   }
+
+   &__title {
+      display: block;
+      margin-bottom: 30px;
+
+      text-align: center;
+      color: getColor('white-text');
+   }
+
+   &__title-dynamic {
+      color: getColor('secondary-color');
+   }
+
+   // ------- bg-image-bottom --------
+   &__codinghtml {
+      @include positioning(absolute);
+      bottom: 70px;
+      left: 23px;
+      rotate: 23deg;
+
+      width: 45px;
+      height: 45px;
+   }
+
+   &__aftere-ffects {
+      @include positioning(absolute);
+      bottom: 78px;
+      left: 156px;
+      rotate: -33deg;
+
+      width: 46px;
+      height: 46px;
+   }
+
+   &__color-palette {
+      @include positioning(absolute);
+      bottom: 125px;
+      left: 287px;
+      rotate: 33deg;
+
+      width: 23px;
+      height: 23px;
+   }
+
+   &__css {
+      @include positioning(absolute);
+      bottom: 173px;
+      left: 57px;
+      rotate: -13deg;
+
+      width: 25px;
+      height: 25px;
+   }
+
+   &__visual_studio {
+      @include positioning(absolute);
+      bottom: 32px;
+      right: 49px;
+      rotate: 13deg;
+
+      width: 35px;
+      height: 35px;
+   }
+
+   &__format_color {
+      @include positioning(absolute);
+      bottom: 194px;
+      right: 57px;
+
+      width: 30px;
+      height: 30px;
+   }
+}

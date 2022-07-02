@@ -1,4 +1,4 @@
-.container {
+.header_box {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -80,6 +80,7 @@
       display: flex;
 
       @include positioning(absolute);
+      z-index: 999;
       left: -100%;
       top: 100%;
       width: 100vw;
