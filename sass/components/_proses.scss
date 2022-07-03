@@ -1,0 +1,53 @@
+.proses {
+   //    @include positioning;
+
+   &__container--line {
+      @include positioning;
+      padding-left: 70px;
+
+      &::after {
+         content: '';
+         @include positioning(absolute);
+         top: 150px;
+         left: 30px;
+         width: 2px;
+         height: 76%;
+         background: getColor('primary-color');
+      }
+   }
+
+   &__title {
+      text-align: center;
+
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.23;
+      color: getColor('primary-color');
+      margin-bottom: $card-set-gap;
+   }
+
+   &__list {
+      @extend %padding-list;
+   }
+
+   &__img {
+      width: 80px;
+      margin-bottom: 20px;
+   }
+
+   &__name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.35;
+      color: getColor('primary-color');
+      margin-bottom: 10px;
+   }
+
+   &__description {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.45;
+      color: getColor('primary-color');
+      padding-bottom: $card-set-gap;
+   }
+}
