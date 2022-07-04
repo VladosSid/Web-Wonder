@@ -36,6 +36,8 @@
    }
 
    &__name {
+      @include positioning;
+
       font-weight: 700;
       font-size: 18px;
       line-height: 1.35;
@@ -49,5 +51,22 @@
       line-height: 1.45;
       color: getColor('primary-color');
       padding-bottom: $card-set-gap;
+   }
+
+   // ----- псевдо метки с номерами
+   &__name--discussion {
+      &::after {
+         content: '1';
+         display: block;
+         width: 30px;
+         height: 30px;
+         text-align: center;
+
+         border: 1px solid getColor('white-text');
+         border-radius: 50%;
+
+         color: getColor('white-text');
+         background: getColor('primary-color');
+      }
    }
 }

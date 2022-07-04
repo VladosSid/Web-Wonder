@@ -706,6 +706,7 @@ p {
   margin-bottom: 20px;
 }
 .proses__name {
+  position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.35;
@@ -718,4 +719,15 @@ p {
   line-height: 1.45;
   color: #3a5b66;
   padding-bottom: 20px;
+}
+.proses__name--discussion::after {
+  content: "1";
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #3a5b66;
 }/*# sourceMappingURL=main.css.map */
