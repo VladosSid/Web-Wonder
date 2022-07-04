@@ -682,16 +682,28 @@ p {
 
 .proses__container--line {
   position: relative;
-  padding-left: 70px;
+}
+@media screen and (max-width: 767px) {
+  .proses__container--line {
+    padding-left: 70px;
+  }
 }
 .proses__container--line::after {
   content: "";
   position: absolute;
-  top: 150px;
+  top: 160px;
   left: 30px;
   width: 2px;
-  height: 76%;
+  height: 75%;
   background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .proses__container--line::after {
+    top: 235px;
+    left: 50%;
+    height: 72%;
+    transform: translateX(-50%);
+  }
 }
 .proses__title {
   text-align: center;
@@ -701,17 +713,69 @@ p {
   color: #3a5b66;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .proses__title {
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .proses__title {
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .proses__item {
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  .proses__item:nth-child(2n) {
+    display: flex;
+    justify-content: end;
+  }
+}
+@media screen and (min-width: 768px) {
+  .proses__box-positioning {
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .proses__box-positioning {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 .proses__img {
-  width: 80px;
+  height: 80px;
   margin-bottom: 20px;
 }
 .proses__name {
-  position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.35;
   color: #3a5b66;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .proses__name {
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  .proses__name {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .proses__name {
+    font-size: 22px;
+  }
 }
 .proses__description {
   font-weight: 700;
@@ -720,14 +784,134 @@ p {
   color: #3a5b66;
   padding-bottom: 20px;
 }
-.proses__name--discussion::after {
-  content: "1";
-  display: block;
+@media screen and (min-width: 768px) {
+  .proses__description {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .proses__description {
+    font-size: 15px;
+  }
+}
+.proses__discussion {
+  position: absolute;
+  left: -54px;
+  top: 50%;
+  z-index: 1;
+  transform: translate(0, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
-  text-align: center;
-  border: 1px solid #ffffff;
+  font-size: 16px;
+  line-height: 1.35;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   color: #ffffff;
   background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .proses__discussion {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.proses__task {
+  position: absolute;
+  left: -54px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 1.35;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .proses__task {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.proses__work {
+  position: absolute;
+  left: -54px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 1.35;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .proses__work {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.proses__edits {
+  position: absolute;
+  left: -54px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 1.35;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .proses__edits {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.proses__resoult {
+  position: absolute;
+  left: -54px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 1.35;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .proses__resoult {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }/*# sourceMappingURL=main.css.map */

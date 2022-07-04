@@ -3,16 +3,25 @@
 
    &__container--line {
       @include positioning;
-      padding-left: 70px;
+      @media screen and (max-width: 767px) {
+         padding-left: 70px;
+      }
 
       &::after {
          content: '';
          @include positioning(absolute);
-         top: 150px;
+         top: 160px;
          left: 30px;
          width: 2px;
-         height: 76%;
+         height: 75%;
          background: getColor('primary-color');
+
+         @media screen and (min-width: $tablet) {
+            top: 235px;
+            left: 50%;
+            height: 72%;
+            transform: translateX(-50%);
+         }
       }
    }
 
@@ -24,25 +33,73 @@
       line-height: 1.23;
       color: getColor('primary-color');
       margin-bottom: $card-set-gap;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 38px;
+         margin-bottom: 60px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 42px;
+      }
    }
 
    &__list {
       @extend %padding-list;
    }
 
+   @media screen and (min-width: $tablet) {
+      &__item {
+         @media screen and (min-width: $tablet) {
+            @include positioning;
+         }
+
+         &:nth-child(2n) {
+            display: flex;
+            justify-content: end;
+         }
+      }
+   }
+
+   @media screen and (min-width: $tablet) {
+      &__box-positioning {
+         width: 50%;
+         padding-left: 30px;
+         padding-right: 30px;
+
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         @media screen and (min-width: $desktop) {
+            padding-left: 50px;
+            padding-right: 50px;
+         }
+      }
+   }
+
    &__img {
-      width: 80px;
+      height: 80px;
       margin-bottom: 20px;
    }
 
    &__name {
-      @include positioning;
+      @media screen and (max-width: 767px) {
+         @include positioning;
+      }
 
       font-weight: 700;
       font-size: 18px;
       line-height: 1.35;
       color: getColor('primary-color');
       margin-bottom: 10px;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 20px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 22px;
+      }
    }
 
    &__description {
@@ -51,22 +108,155 @@
       line-height: 1.45;
       color: getColor('primary-color');
       padding-bottom: $card-set-gap;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 14px;
+         text-align: center;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 15px;
+      }
    }
 
    // ----- псевдо метки с номерами
-   &__name--discussion {
-      &::after {
-         content: '1';
-         display: block;
-         width: 30px;
-         height: 30px;
-         text-align: center;
+   &__discussion {
+      @include positioning(absolute);
+      left: -54px;
+      top: 50%;
+      z-index: 1;
+      transform: translate(0, -50%);
 
-         border: 1px solid getColor('white-text');
-         border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
 
-         color: getColor('white-text');
-         background: getColor('primary-color');
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__task {
+      @include positioning(absolute);
+      left: -54px;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__work {
+      @include positioning(absolute);
+      left: -54px;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__edits {
+      @include positioning(absolute);
+      left: -54px;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__resoult {
+      @include positioning(absolute);
+      left: -54px;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         left: 50%;
+         transform: translate(-50%, -50%);
       }
    }
 }
