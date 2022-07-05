@@ -52,3 +52,12 @@ ScrollReveal().reveal('.timeline-content', {
    duration: 800,
    delay: 2000,
 });
+
+ScrollReveal().reveal('.timeline-img', { delay: 500 });
+ScrollReveal().reveal('.timeline-content', {
+   origin: 'left',
+   distance: '300px',
+   easing: 'ease-in-out',
+   duration: 800,
+   delay: 2000,
+});

@@ -150,8 +150,8 @@
 
    &__task {
       @include positioning(absolute);
-      left: -54px;
-      top: 50%;
+      left: 15px;
+      top: 36%;
       z-index: 1;
       transform: translateY(-50%);
 
@@ -179,8 +179,8 @@
 
    &__work {
       @include positioning(absolute);
-      left: -54px;
-      top: 50%;
+      left: 15px;
+      top: 53%;
       z-index: 1;
       transform: translateY(-50%);
 
@@ -211,8 +211,8 @@
 
    &__edits {
       @include positioning(absolute);
-      left: -54px;
-      top: 50%;
+      left: 15px;
+      top: 73%;
       z-index: 1;
       transform: translateY(-50%);
 
@@ -244,8 +244,8 @@
 
    &__resoult {
       @include positioning(absolute);
-      left: -54px;
-      top: 50%;
+      left: 15px;
+      top: 91%;
       z-index: 1;
       transform: translateY(-50%);
 

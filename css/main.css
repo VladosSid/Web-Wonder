@@ -821,8 +821,8 @@ p {
 }
 .proses__task {
   position: absolute;
-  left: -54px;
-  top: 50%;
+  left: 15px;
+  top: 36%;
   z-index: 1;
   transform: translateY(-50%);
   display: flex;
@@ -846,8 +846,8 @@ p {
 }
 .proses__work {
   position: absolute;
-  left: -54px;
-  top: 50%;
+  left: 15px;
+  top: 53%;
   z-index: 1;
   transform: translateY(-50%);
   display: flex;
@@ -876,8 +876,8 @@ p {
 }
 .proses__edits {
   position: absolute;
-  left: -54px;
-  top: 50%;
+  left: 15px;
+  top: 73%;
   z-index: 1;
   transform: translateY(-50%);
   display: flex;
@@ -906,8 +906,8 @@ p {
 }
 .proses__resoult {
   position: absolute;
-  left: -54px;
-  top: 50%;
+  left: 15px;
+  top: 91%;
   z-index: 1;
   transform: translateY(-50%);
   display: flex;
