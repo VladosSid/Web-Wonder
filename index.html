@@ -18,7 +18,9 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       />
+
       <link rel="stylesheet" href="./css/main.min.css" />
+      <script src="https://unpkg.com/scrollreveal"></script>
    </head>
    <body>
       <header class="header">
@@ -80,7 +82,7 @@
             <nav class="nav nav--hidden">
                <ul class="nav__list">
                   <li class="nav__item nav__item--position">
-                     <a href="" class="nav__link nav__link--secondary"
+                     <a href="./test.html" class="nav__link nav__link--secondary"
                         >Послуги
                         <svg width="8" height="8" class="nav__open-secondary-menu">
                            <use href="./img/symbol-defs.svg#open-secondary-menu"></use>
@@ -163,7 +165,8 @@
                <h2 class="proses__title">Як ми працюємо</h2>
                <ul class="proses__list">
                   <li class="proses__item">
-                     <div class="proses__box-positioning">
+                     <div class="proses__discussion proses__discussion--scroll">1</div>
+                     <div class="proses__box-positioning proses__box-positioning--scroll">
                         <picture>
                            <source srcset="./img/discussion.webp" type="image/webp" />
                            <img
@@ -172,9 +175,7 @@
                               alt="Обговорення"
                            />
                         </picture>
-                        <h3 class="proses__name">
-                           Обговорення <span class="proses__discussion">1</span>
-                        </h3>
+                        <h3 class="proses__name">Обговорення</h3>
                         <p class="proses__description">
                            Проводиться невелике опитування, щоб наша команда зорієнтувала Вас за
                            вартістю та терміном виконання.
@@ -258,7 +259,7 @@
             </div>
          </section>
       </main>
-
+      <script src="./js/scrollreveal.js"></script>
       <script src="./js/mobail-menu.js"></script>
       <script src="./js/dynamic-text.js"></script>
    </body>

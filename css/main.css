@@ -797,8 +797,8 @@ p {
 }
 .proses__discussion {
   position: absolute;
-  left: -54px;
-  top: 50%;
+  left: 15px;
+  top: 16%;
   z-index: 1;
   transform: translate(0, -50%);
   display: flex;
@@ -839,6 +839,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .proses__task {
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -863,8 +864,14 @@ p {
 }
 @media screen and (min-width: 768px) {
   .proses__work {
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .proses__work {
+    top: 51%;
   }
 }
 .proses__edits {
@@ -887,8 +894,14 @@ p {
 }
 @media screen and (min-width: 768px) {
   .proses__edits {
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .proses__edits {
+    top: 56%;
   }
 }
 .proses__resoult {
