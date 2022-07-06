@@ -1,0 +1,23 @@
+.differences {
+   background-color: getColor('primary-color');
+
+   &__title {
+      @extend %title-text;
+      color: getColor('white-text');
+      margin-bottom: $card-set-gap;
+   }
+
+   //    ----- таблица ----
+   &__box-table {
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+   }
+   &__table {
+      text-align: center;
+      width: 80%;
+      border-radius: 5px;
+      background-color: getColor('white-color');
+   }
+}

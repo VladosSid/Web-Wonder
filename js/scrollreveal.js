@@ -35,7 +35,7 @@ ScrollReveal().reveal('.proses__work--scroll', {
 });
 
 // ------- проявленние точки на прямой скцимя 4-----
-ScrollReveal().reveal('.proses__work--scroll', {
+ScrollReveal().reveal('.proses__edits--scroll', {
    easing: 'ease-in-out',
    duration: 1500,
    delay: 500,

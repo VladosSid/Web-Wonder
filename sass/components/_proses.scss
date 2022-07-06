@@ -1,5 +1,26 @@
 .proses {
-   //    @include positioning;
+   @include positioning;
+
+   &::before {
+      content: '';
+      display: block;
+
+      width: 100vw;
+      height: 40px;
+      @include positioning(absolute);
+      bottom: 0;
+      left: 0;
+      transform: translateY(39px);
+      clip-path: polygon(48% 55%, 0 0, 100% 0);
+
+      background: getColor('white-text');
+
+      @media screen and (min-width: $tablet) {
+         height: 60px;
+
+         transform: translateY(59px);
+      }
+   }
 
    &__container--line {
       @include positioning;
@@ -17,7 +38,7 @@
          background: getColor('primary-color');
 
          @media screen and (min-width: $tablet) {
-            top: 235px;
+            top: 220px;
             left: 50%;
             height: 72%;
             transform: translateX(-50%);
@@ -26,11 +47,7 @@
    }
 
    &__title {
-      text-align: center;
-
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 1.23;
+      @extend %title-text;
       color: getColor('primary-color');
       margin-bottom: $card-set-gap;
 
@@ -143,6 +160,7 @@
       background: getColor('primary-color');
 
       @media screen and (min-width: $tablet) {
+         top: 48%;
          left: 50%;
          transform: translate(-50%, -50%);
       }
@@ -265,6 +283,7 @@
       background: getColor('primary-color');
 
       @media screen and (min-width: $tablet) {
+         top: 48%;
          left: 50%;
          transform: translate(-50%, -50%);
       }

@@ -5,6 +5,7 @@ $colors: (
    'white-text': #ffffff,
    'secondary-text': #0a5b66,
    'accent': #27454f,
+   'white-color': #fff,
 );
 
 @function getColor($key) {
