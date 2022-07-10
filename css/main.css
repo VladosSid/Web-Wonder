@@ -1043,6 +1043,11 @@ p {
     font-size: 18px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .differences__data-title {
+    font-size: 20px;
+  }
+}
 .differences__data {
   font-size: 12px;
   line-height: 1.45;
@@ -1052,6 +1057,11 @@ p {
   .differences__data {
     font-size: 14px;
     line-height: 1.55;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .differences__data {
+    font-size: 16px;
   }
 }
 .differences__data-title--alignment, .differences__data--alignment {
@@ -1152,6 +1162,7 @@ p {
   }
 }
 .portfolio__button {
+  text-decoration: none;
   padding-top: 5px;
   padding-left: 20px;
   padding-bottom: 5px;
