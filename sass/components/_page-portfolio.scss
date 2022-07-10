@@ -1,0 +1,133 @@
+.portfolio {
+   @include positioning;
+
+   &::before {
+      content: '';
+      display: block;
+
+      width: 100vw;
+      height: 40px;
+      @include positioning(absolute);
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transform: translateY(39px);
+      clip-path: polygon(50% 55%, 0 0, 100% 0);
+
+      background: getColor('white-color');
+
+      @media screen and (min-width: $tablet) {
+         height: 60px;
+
+         transform: translateY(59px);
+      }
+   }
+
+   &__global-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__title {
+      text-align: center;
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      padding-right: 30px;
+      margin-bottom: 50px;
+
+      font-size: 36px;
+      line-height: 1.55;
+      font-weight: 700;
+
+      border-radius: 10px;
+
+      background-color: getColor('primary-color');
+      color: getColor('white-text');
+
+      @media screen and (min-width: $tablet) {
+         padding-top: 20px;
+         padding-left: 50px;
+         padding-bottom: 20px;
+         padding-right: 50px;
+
+         font-size: 46px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 56px;
+      }
+   }
+
+   &__box-services {
+      display: flex;
+      flex-direction: row;
+   }
+
+   &__logo,
+   &__site {
+      margin-right: 30px;
+   }
+
+   &__logo,
+   &__site,
+   &__promotion {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__services-title {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.55;
+      font-weight: 700;
+      margin-bottom: 30px;
+
+      color: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         font-size: 20px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 28px;
+      }
+   }
+
+   &__button {
+      padding-top: 5px;
+      padding-left: 20px;
+      padding-bottom: 5px;
+      padding-right: 20px;
+
+      font-size: 10px;
+      line-height: 1.55;
+      font-weight: 900;
+
+      border: 2px solid getColor('primary-color');
+      border-radius: 10px;
+
+      background-color: getColor('white-color');
+      color: getColor('primary-color');
+
+      transition: color $timing-function-cubic, background-color $timing-function-cubic;
+
+      &:hover,
+      &:focus {
+         background-color: getColor('primary-color');
+         color: getColor('white-color');
+      }
+
+      @media screen and (min-width: $tablet) {
+         font-size: 12px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 14px;
+      }
+   }
+}
