@@ -1,4 +1,5 @@
 .differences {
+   @include positioning;
    background-color: getColor('primary-color');
 
    &__title {
@@ -8,16 +9,62 @@
    }
 
    //    ----- таблица ----
-   &__box-table {
-      display: flex;
-      justify-content: center;
 
-      width: 100%;
+   &__box-table {
+      @include positioning;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: scroll;
+
+      display: flex;
+      justify-content: start;
+      background-color: #fff;
+      border-radius: 10px;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      width: 90vw;
+
+      @media screen and (min-width: $desktop) {
+         max-width: 1200px;
+      }
    }
+
    &__table {
       text-align: center;
-      width: 80%;
-      border-radius: 5px;
+      width: 100%;
+
+      border-radius: 15px;
       background-color: getColor('white-color');
+
+      border-collapse: collapse;
+   }
+
+   &__data-title,
+   &__data {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+
+   &__data-title {
+      border-bottom: 2px solid #e4e4e4;
+   }
+
+   &__data-title--alignment,
+   &__data--alignment {
+      text-align: start;
+   }
+
+   &__icon-check {
+      fill: #25b309;
+   }
+
+   &__icon-cros {
+      fill: #f24613;
    }
 }

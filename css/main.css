@@ -966,6 +966,7 @@ p {
 }
 
 .differences {
+  position: relative;
   background-color: #3a5b66;
 }
 .differences__title {
@@ -973,13 +974,47 @@ p {
   margin-bottom: 20px;
 }
 .differences__box-table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: scroll;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: start;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 90vw;
+}
+@media screen and (min-width: 1200px) {
+  .differences__box-table {
+    max-width: 1200px;
+  }
 }
 .differences__table {
   text-align: center;
-  width: 80%;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 15px;
   background-color: #fff;
+  border-collapse: collapse;
+}
+.differences__data-title, .differences__data {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.differences__data-title {
+  border-bottom: 2px solid #e4e4e4;
+}
+.differences__data-title--alignment, .differences__data--alignment {
+  text-align: start;
+}
+.differences__icon-check {
+  fill: #25b309;
+}
+.differences__icon-cros {
+  fill: #f24613;
 }/*# sourceMappingURL=main.css.map */
