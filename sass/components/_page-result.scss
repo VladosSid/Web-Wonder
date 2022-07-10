@@ -4,23 +4,109 @@
 
    &::before {
       content: '';
-      display: block;
-
-      width: 100vw;
-      height: 40px;
       @include positioning(absolute);
       bottom: 0;
-      left: 0;
-      z-index: 1;
-      transform: translateY(39px);
-      clip-path: polygon(50% 55%, 0 0, 100% 0);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 480px;
+      height: 1px;
+      background: linear-gradient(
+         90deg,
+         rgba(58, 91, 102, 1) 0%,
+         rgba(255, 153, 51, 1) 15%,
+         rgba(255, 153, 51, 1) 83%,
+         rgba(58, 91, 102, 1) 100%
+      );
+      @media screen and (min-width: 768px) {
+         width: 768px;
+      }
+      @media screen and (min-width: 1200px) {
+         width: 1200px;
+      }
+   }
 
-      background: getColor('primary-color');
+   &__global-box {
+      @include positioning;
+   }
+
+   &__title {
+      font-size: 32px;
+      line-height: 1.55;
+      font-weight: 700;
+      text-align: center;
+
+      // margin-bottom: 1000px;
+
+      color: getColor('white-text');
 
       @media screen and (min-width: $tablet) {
-         height: 60px;
-
-         transform: translateY(59px);
+         font-size: 40px;
       }
+
+      @media screen and (min-width: $tablet) {
+         font-size: 48px;
+      }
+   }
+
+   &__box-positioning {
+      height: 1000px;
+      width: 100%;
+   }
+
+   &__logo,
+   &__desing,
+   &__site,
+   &__promotion {
+      @include positioning(sticky);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__logo {
+      top: 150px;
+      left: 10%;
+   }
+
+   &__block-title {
+      font-size: 16px;
+      line-height: 1.55;
+
+      color: getColor('white-text');
+      margin-bottom: $card-set-gap;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 18px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 20px;
+      }
+   }
+
+   &__picture {
+      width: 95px;
+
+      @media screen and (min-width: $tablet) {
+         width: 120px;
+      }
+
+      @media screen and (min-width: $tablet) {
+         width: 200px;
+      }
+   }
+
+   &__box-finished {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__picture-finished {
+      width: 958px;
+      text-align: center;
+      margin-bottom: $card-set-gap;
    }
 }
