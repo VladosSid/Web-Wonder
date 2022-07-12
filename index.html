@@ -411,20 +411,34 @@
             <div class="container portfolio__global-box">
                <h2 class="portfolio__title">Портфоліо</h2>
 
-               <div class="portfolio__box-services">
-                  <div class="portfolio__logo">
-                     <h3 class="portfolio__services-title">Лого</h3>
+               <ul class="portfolio__list">
+                  <li class="portfolio__logo">
+                     <h3 class="portfolio__services-title">Логотип</h3>
+                     <picture>
+                        <source srcset="./img/" type="image/webp" />
+                        <img src="./img" alt="" class="portfolio__img img-position" />
+                     </picture>
                      <a href="" class="portfolio__button">Відкрити</a>
-                  </div>
-                  <div class="portfolio__site">
-                     <h3 class="portfolio__services-title">Сайти</h3>
+                  </li>
+
+                  <li class="portfolio__site">
+                     <h3 class="portfolio__services-title">Розробка сайту</h3>
+                     <picture>
+                        <source srcset="./img/" type="image/webp" />
+                        <img src="./img" alt="" class="portfolio__img img-position" />
+                     </picture>
                      <a href="" class="portfolio__button">Відкрити</a>
-                  </div>
-                  <div class="portfolio__promotion">
-                     <h3 class="portfolio__services-title">Просування</h3>
+                  </li>
+
+                  <li class="portfolio__promotion">
+                     <h3 class="portfolio__services-title">Дизайн сайту</h3>
+                     <picture>
+                        <source srcset="./img/" type="image/webp" />
+                        <img src="./img" alt="" class="portfolio__img img-position" />
+                     </picture>
                      <a href="" class="portfolio__button">Відкрити</a>
-                  </div>
-               </div>
+                  </li>
+               </ul>
             </div>
          </section>
 
@@ -500,6 +514,104 @@
                      />
                   </picture>
                   <p class="result__name">Результат</p>
+               </div>
+
+               <div class="calculator">
+                  <h3 class="calculator__title">Калькулятор вартості</h3>
+
+                  <ul class="calculator__list">
+                     <li class="calculator__item">
+                        <button type="button" class="calculator__button">Дизайн</button>
+
+                        <form autocomplete="off" class="calculator__form">
+                           <label class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="choice"
+                                 class="calculator__design-a text-delete"
+                              />
+                              <span class="calculator__icon-check-a"></span>
+                              Лого
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__hidden" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__hidden" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__hidden" />
+                           </label>
+                        </form>
+                     </li>
+
+                     <li class="calculator__item">
+                        <button type="button" class="calculator__button">Сайт</button>
+
+                        <form autocomplete="off" class="calculator__form">
+                           <label for="">
+                              <input type="radio" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="radio" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="radio" class="calculator__" />
+                           </label>
+
+                           <p class="calculator__form-title">Тип сайту</p>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+                        </form>
+                     </li>
+
+                     <li class="calculator__item">
+                        <button type="button" class="calculator__button">Просування</button>
+
+                        <form autocomplete="off" class="calculator__form">
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+
+                           <label for="">
+                              <input type="checkbox" class="calculator__" />
+                           </label>
+                        </form>
+                     </li>
+                  </ul>
+
+                  <b class="calculator__sum"
+                     >Вартість <span class="">від &#36;</span> <span class=""></span>
+                  </b>
+
+                  <button class="calculator__consult" type="button">Консультація</button>
                </div>
             </div>
          </section>

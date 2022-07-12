@@ -42,12 +42,25 @@ p {
 }
 
 /* сброс отсутпов и точек в списках */
-.proses__list, .nav__secondary-list, .nav__list {
+.calculator__list, .portfolio__list, .proses__list, .nav__secondary-list, .nav__list {
   padding-left: 0;
   list-style-type: none;
 }
 
 /* Скрывет текст */
+.text-delete {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* глобальные параметры картинок */
 .img-position {
   display: block;
@@ -1130,12 +1143,17 @@ p {
     font-size: 56px;
   }
 }
-.portfolio__box-services {
-  display: flex;
-  flex-direction: row;
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
 }
-.portfolio__logo, .portfolio__site {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .portfolio__logo, .portfolio__site {
+    margin-bottom: 30px;
+  }
 }
 .portfolio__logo, .portfolio__site, .portfolio__promotion {
   display: flex;
@@ -1160,6 +1178,16 @@ p {
   .portfolio__services-title {
     font-size: 28px;
   }
+}
+.portfolio__img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 3px solid #3a5b66;
+  border-radius: 50%;
+  box-shadow: 1px 2px 44px -16px rgba(42, 42, 42, 0.75);
+  -webkit-box-shadow: 1px 2px 44px -16px rgba(42, 42, 42, 0.75);
+  -moz-box-shadow: 1px 2px 44px -16px rgba(42, 42, 42, 0.75);
 }
 .portfolio__button {
   text-decoration: none;
@@ -1194,26 +1222,6 @@ p {
 .result {
   position: relative;
   background-color: #3a5b66;
-}
-.result::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 480px;
-  height: 1px;
-  background: linear-gradient(90deg, rgb(58, 91, 102) 0%, rgb(255, 153, 51) 15%, rgb(255, 153, 51) 83%, rgb(58, 91, 102) 100%);
-}
-@media screen and (min-width: 768px) {
-  .result::before {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .result::before {
-    width: 1200px;
-  }
 }
 .result__title {
   font-size: 32px;
@@ -1321,10 +1329,32 @@ p {
   }
 }
 .result__box-finished {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
+}
+.result__box-finished::before {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 1px;
+  background: linear-gradient(90deg, rgb(58, 91, 102) 0%, rgb(255, 153, 51) 15%, rgb(255, 153, 51) 83%, rgb(58, 91, 102) 100%);
+}
+@media screen and (min-width: 768px) {
+  .result__box-finished::before {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .result__box-finished::before {
+    width: 1200px;
+  }
 }
 .result__picture-finished {
   width: 958px;
@@ -1346,4 +1376,64 @@ p {
   .result__name {
     font-size: 48px;
   }
+}
+
+.calculator__title {
+  font-size: 22px;
+  line-height: 1.55;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.calculator__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator__button {
+  width: 200px;
+  height: 80px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 1.55;
+  font-weight: 600;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #3a5b66;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.calculator__button:hover, .calculator__button:focus {
+  background-color: #27454f;
+}
+.calculator__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-bottom: 60px;
+}
+.calculator__check-label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.calculator__icon-check-a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+  border: 2px solid #ff9933;
+}
+.calculator__design-a:checked + .calculator__icon-check-a {
+  opacity: 1;
+  border: 3px solid #ff9933;
+  background-image: url(../img/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
 }/*# sourceMappingURL=main.css.map */

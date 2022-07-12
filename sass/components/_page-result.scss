@@ -2,40 +2,12 @@
    @include positioning;
    background-color: getColor('primary-color');
 
-   &::before {
-      content: '';
-      @include positioning(absolute);
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 480px;
-      height: 1px;
-      background: linear-gradient(
-         90deg,
-         rgba(58, 91, 102, 1) 0%,
-         rgba(255, 153, 51, 1) 15%,
-         rgba(255, 153, 51, 1) 83%,
-         rgba(58, 91, 102, 1) 100%
-      );
-      @media screen and (min-width: 768px) {
-         width: 768px;
-      }
-      @media screen and (min-width: 1200px) {
-         width: 1200px;
-      }
-   }
-
-   // &__global-box {
-   //    // @include positioning;
-   // }
-
+   // ---- заголовок секции -----
    &__title {
       font-size: 32px;
       line-height: 1.55;
       font-weight: 700;
       text-align: center;
-
-      // margin-bottom: 1000px;
 
       color: getColor('white-text');
 
@@ -48,6 +20,8 @@
       }
    }
 
+   // ------ коробка с пустым мсто для
+   // позиционирвоания
    &__box-positioning {
       height: 1000px;
       width: 100%;
@@ -60,11 +34,14 @@
       @include positioning(sticky);
    }
 
+   // --- коробка для липкого позиционирвоания
+   // ---- ПОМЕНЯТЬ МЕСТАМИ!!! ------
    &__logo {
       top: 1000px;
       z-index: 5;
    }
 
+   // --- коробка для адсолютного позиционирвоания
    &__box-logo {
       @include positioning(absolute);
       top: 0;
@@ -152,11 +129,37 @@
       }
    }
 
+   // ---- картинка с результатом ----
    &__box-finished {
+      @include positioning;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 100px;
+
+      &::before {
+         content: '';
+         @include positioning(absolute);
+         bottom: -80px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 480px;
+         height: 1px;
+         background: linear-gradient(
+            90deg,
+            rgba(58, 91, 102, 1) 0%,
+            rgba(255, 153, 51, 1) 15%,
+            rgba(255, 153, 51, 1) 83%,
+            rgba(58, 91, 102, 1) 100%
+         );
+         @media screen and (min-width: 768px) {
+            width: 768px;
+         }
+         @media screen and (min-width: 1200px) {
+            width: 1200px;
+         }
+      }
    }
 
    &__picture-finished {
@@ -178,5 +181,87 @@
       @media screen and (min-width: $tablet) {
          font-size: 48px;
       }
+   }
+}
+// ----- КАЛЬКУЛЯТОР ------
+.calculator {
+   &__title {
+      font-size: 22px;
+      line-height: 1.55;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: $card-set-gap;
+
+      color: getColor('white-text');
+   }
+
+   &__list {
+      @extend %padding-list;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__button {
+      width: 200px;
+      height: 80px;
+
+      margin-bottom: $card-set-gap;
+
+      font-size: 28px;
+      line-height: 1.55;
+      font-weight: 600;
+
+      border: 5px solid getColor('white-color');
+      border-radius: 10px;
+
+      color: getColor('white-text');
+      background-color: getColor('primary-color');
+
+      transition: background-color $timing-function-cubic;
+
+      &:hover,
+      &:focus {
+         background-color: getColor('accent');
+      }
+   }
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      margin-bottom: 60px;
+   }
+
+   &__check-label {
+      display: flex;
+      align-items: center;
+
+      font-size: 16px;
+      font-weight: 700;
+      color: getColor('white-text');
+   }
+
+   &__icon-check-a {
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      margin-right: 10px;
+      opacity: 0.5;
+
+      border: 2px solid getColor('secondary-color');
+   }
+
+   &__design-a:checked + .calculator__icon-check-a {
+      opacity: 1;
+      border: 3px solid getColor('secondary-color');
+      background-image: url(../img/icon-check.svg);
+      background-position: center;
+      // background-size: 11px 8px;
+      background-repeat: no-repeat;
+      background-origin: border-box;
    }
 }

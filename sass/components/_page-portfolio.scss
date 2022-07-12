@@ -61,14 +61,20 @@
       }
    }
 
-   &__box-services {
-      display: flex;
-      flex-direction: row;
+   &__list {
+      @extend %padding-list;
+      @media screen and (min-width: $tablet) {
+         display: flex;
+         flex-direction: row;
+         gap: 30px;
+      }
    }
 
-   &__logo,
-   &__site {
-      margin-right: 30px;
+   @media screen and (max-width: 767px) {
+      &__logo,
+      &__site {
+         margin-bottom: 30px;
+      }
    }
 
    &__logo,
@@ -96,6 +102,19 @@
       @media screen and (min-width: $desktop) {
          font-size: 28px;
       }
+   }
+
+   &__img {
+      width: 100px;
+      height: 100px;
+
+      margin-bottom: $card-set-gap;
+
+      border: 3px solid getColor('primary-color');
+      border-radius: 50%;
+      box-shadow: 1px 2px 44px -16px rgba(42, 42, 42, 0.75);
+      -webkit-box-shadow: 1px 2px 44px -16px rgba(42, 42, 42, 0.75);
+      -moz-box-shadow: 1px 2px 44px -16px rgba(42, 42, 42, 0.75);
    }
 
    &__button {
