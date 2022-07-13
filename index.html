@@ -524,26 +524,48 @@
                         <button type="button" class="calculator__button">Дизайн</button>
 
                         <form autocomplete="off" class="calculator__form">
-                           <label class="calculator__check-label">
+                           <label for="logo" class="calculator__check-label">
                               <input
                                  type="checkbox"
-                                 name="choice"
-                                 class="calculator__design-a text-delete"
+                                 name="logo"
+                                 id="logo"
+                                 class="calculator__checkbox text-delete"
                               />
-                              <span class="calculator__icon-check-a"></span>
-                              Лого
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">Лого</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__hidden" />
+                           <label for="site-design" class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="site-design"
+                                 id="site-design"
+                                 class="calculator__checkbox text-delete"
+                              />
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">Дизайн сайту</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__hidden" />
+                           <label for="social-media-design" class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="social-media-design"
+                                 id="social-media-design"
+                                 class="calculator__checkbox text-delete"
+                              />
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">Дизайн соцмереж</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__hidden" />
+                           <label for="form-style" class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="form-style"
+                                 id="form-style"
+                                 class="calculator__checkbox text-delete"
+                              />
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">Фірмовий стиль</span>
                            </label>
                         </form>
                      </li>
@@ -552,38 +574,95 @@
                         <button type="button" class="calculator__button">Сайт</button>
 
                         <form autocomplete="off" class="calculator__form">
-                           <label for="">
-                              <input type="radio" class="calculator__" />
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site"
+                                 value="site-constructor"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Сайт на конструкторі</span>
                            </label>
 
-                           <label for="">
-                              <input type="radio" class="calculator__" />
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site"
+                                 value="code-layout"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Верстка кодом</span>
                            </label>
 
-                           <label for="">
-                              <input type="radio" class="calculator__" />
+                           <label class="calculator__radio-label calculator__radio-lable--indent">
+                              <input
+                                 type="radio"
+                                 name="site"
+                                 value="no-way"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Ніяк </span>
                            </label>
 
                            <p class="calculator__form-title">Тип сайту</p>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <form autocomplete="off" class="calculator__form">
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site-type"
+                                 value="landing"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Лендінг</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site-type"
+                                 value="internet-shop"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Інтернет магазин </span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site-type"
+                                 value="website-business-card"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Сайт візитка</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site-type"
+                                 value="business-website"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Бізнес сайт</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label class="calculator__radio-label">
+                              <input
+                                 type="radio"
+                                 name="site-type"
+                                 value="no-way"
+                                 class="calculator__radio text-delete"
+                              />
+                              <span class="calculator__icon-radio"></span>
+                              <span class="calculator__name-input">Ніякий </span>
                            </label>
                         </form>
                      </li>
@@ -592,16 +671,37 @@
                         <button type="button" class="calculator__button">Просування</button>
 
                         <form autocomplete="off" class="calculator__form">
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label for="seo" class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="seo"
+                                 id="seo"
+                                 class="calculator__checkbox text-delete"
+                              />
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">SEO оптимізація </span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label for="google-ads" class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="google-ads"
+                                 id="google-ads"
+                                 class="calculator__checkbox text-delete"
+                              />
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">Реклама Google</span>
                            </label>
 
-                           <label for="">
-                              <input type="checkbox" class="calculator__" />
+                           <label for="copywriting" class="calculator__check-label">
+                              <input
+                                 type="checkbox"
+                                 name="copywriting"
+                                 id="copywriting"
+                                 class="calculator__checkbox text-delete"
+                              />
+                              <span class="calculator__icon-check"></span>
+                              <span class="calculator__name-input">Копірайтинг</span>
                            </label>
                         </form>
                      </li>

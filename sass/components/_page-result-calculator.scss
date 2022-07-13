@@ -1,0 +1,149 @@
+// ----- КАЛЬКУЛЯТОР ------
+.calculator {
+   &__title {
+      font-size: 22px;
+      line-height: 1.55;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: $card-set-gap;
+
+      color: getColor('white-text');
+   }
+
+   &__list {
+      @extend %padding-list;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__button {
+      width: 250px;
+      height: 80px;
+
+      margin-bottom: $card-set-gap;
+
+      font-size: 28px;
+      line-height: 1.55;
+      font-weight: 600;
+
+      border: 5px solid getColor('white-color');
+      border-radius: 10px;
+
+      color: getColor('white-text');
+      background-color: getColor('primary-color');
+
+      transition: background-color $timing-function-cubic;
+
+      &:hover,
+      &:focus {
+         background-color: getColor('accent');
+      }
+   }
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      margin-bottom: 60px;
+   }
+
+   // ---- ЧЕКБОКСЫ ----
+   &__check-label,
+   &__radio-label {
+      display: flex;
+      align-items: center;
+   }
+
+   &__check-label:not(:last-child),
+   &__radio-label:not(:last-child) {
+      margin-bottom: 8px;
+   }
+
+   &__icon-check {
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      margin-right: 10px;
+      opacity: 0.5;
+
+      border: 3px solid getColor('secondary-color');
+
+      transition: opacity $timing-function-cubic, border $timing-function-cubic,
+         background-image $timing-function-cubic;
+   }
+
+   &__check-label:hover .calculator__icon-check {
+      opacity: 1;
+      border: 3px solid getColor('secondary-color');
+   }
+
+   &__checkbox:checked + .calculator__icon-check {
+      opacity: 1;
+      border: 3px solid getColor('secondary-color');
+      background-image: url(../img/icon-check.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-origin: border-box;
+   }
+
+   &__name-input {
+      font-size: 16px;
+      font-weight: 700;
+      color: getColor('white-text');
+
+      transition: color $timing-function-cubic;
+   }
+
+   &__checkbox:checked ~ .calculator__name-input {
+      color: getColor('secondary-color');
+   }
+
+   // ------ РАДИОКНОПКИ -----
+   &__radio-label:nth-child(3) {
+      margin-bottom: $card-set-gap;
+   }
+
+   &__icon-radio {
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      background-image: url(../img/svg/radio-unchecked.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-origin: border-box;
+      background-size: 20px;
+
+      margin-right: 5px;
+      opacity: 0.5;
+
+      transition: opacity $timing-function-cubic, background-image $timing-function-cubic;
+   }
+
+   &__radio:checked + .calculator__icon-radio {
+      opacity: 1;
+
+      background-image: url(../img/svg/radio-checked.svg);
+   }
+
+   &__radio:checked ~ .calculator__name-input {
+      color: getColor('secondary-color');
+   }
+
+   &__radio-label:hover .calculator__icon-radio {
+      opacity: 1;
+   }
+
+   &__form-title {
+      font-weight: 700;
+      font-size: 20px;
+
+      color: getColor('white-text');
+
+      margin-bottom: 10px;
+   }
+}

@@ -1393,7 +1393,7 @@ p {
   align-items: center;
 }
 .calculator__button {
-  width: 200px;
+  width: 250px;
   height: 80px;
   margin-bottom: 20px;
   font-size: 28px;
@@ -1414,26 +1414,72 @@ p {
   justify-content: start;
   margin-bottom: 60px;
 }
-.calculator__check-label {
+.calculator__check-label, .calculator__radio-label {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
 }
-.calculator__icon-check-a {
+.calculator__check-label:not(:last-child), .calculator__radio-label:not(:last-child) {
+  margin-bottom: 8px;
+}
+.calculator__icon-check {
   display: block;
   width: 20px;
   height: 20px;
   margin-right: 10px;
   opacity: 0.5;
-  border: 2px solid #ff9933;
+  border: 3px solid #ff9933;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.calculator__design-a:checked + .calculator__icon-check-a {
+.calculator__check-label:hover .calculator__icon-check {
+  opacity: 1;
+  border: 3px solid #ff9933;
+}
+.calculator__checkbox:checked + .calculator__icon-check {
   opacity: 1;
   border: 3px solid #ff9933;
   background-image: url(../img/icon-check.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
+}
+.calculator__name-input {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.calculator__checkbox:checked ~ .calculator__name-input {
+  color: #ff9933;
+}
+.calculator__radio-label:nth-child(3) {
+  margin-bottom: 20px;
+}
+.calculator__icon-radio {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/svg/radio-unchecked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: 20px;
+  margin-right: 5px;
+  opacity: 0.5;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.calculator__radio:checked + .calculator__icon-radio {
+  opacity: 1;
+  background-image: url(../img/svg/radio-checked.svg);
+}
+.calculator__radio:checked ~ .calculator__name-input {
+  color: #ff9933;
+}
+.calculator__radio-label:hover .calculator__icon-radio {
+  opacity: 1;
+}
+.calculator__form-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=main.css.map */
