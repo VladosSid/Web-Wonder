@@ -146,4 +146,62 @@
 
       margin-bottom: 10px;
    }
+
+   // ----- Сумма расчета -----
+   &__sum-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__sum {
+      width: 300px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: $card-set-gap;
+
+      border-radius: 10px;
+
+      background-color: getColor('white-color');
+
+      line-height: 1.55;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      color: getColor('primary-color');
+   }
+
+   &__sum-secondary-text {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.35;
+
+      color: getColor('secondary-color');
+   }
+
+   //  ---- button
+   &__consult {
+      padding-top: 15px;
+      padding-right: 35px;
+      padding-bottom: 15px;
+      padding-left: 35px;
+
+      border: 2px solid getColor('secondary-color');
+      border-radius: 30px;
+
+      background-color: getColor('primary-color');
+
+      line-height: 1.55;
+      font-weight: 900;
+      font-size: 15px;
+      color: getColor('white-text');
+
+      transition: background-color $timing-function-cubic, border-color $timing-function-cubic;
+
+      &:hover,
+      &:focus {
+         border-color: getColor('white-color');
+         background-color: getColor('accent');
+      }
+   }
 }
