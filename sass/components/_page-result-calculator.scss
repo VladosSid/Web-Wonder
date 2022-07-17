@@ -8,6 +8,10 @@
       margin-bottom: $card-set-gap;
 
       color: getColor('white-text');
+
+      @include tablet {
+         font-size: 36px;
+      }
    }
 
    &__list {
@@ -16,6 +20,34 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      @include tablet {
+         align-items: flex-start;
+         flex-direction: row;
+         gap: $card-set-gap;
+      }
+   }
+
+   &__item {
+      @include desktop {
+         display: flex;
+         flex-direction: column;
+
+         align-items: center;
+      }
+   }
+
+   &__item.is-oppen .calculator__form {
+      display: flex;
+   }
+
+   &__item-position {
+      @include tablet {
+         display: flex;
+         flex-direction: column;
+
+         align-items: center;
+      }
    }
 
    &__button {
@@ -40,10 +72,22 @@
       &:focus {
          background-color: getColor('accent');
       }
+
+      @include tablet {
+         width: 200px;
+
+         font-size: 20px;
+      }
+
+      @include desktop {
+         width: 300px;
+         height: 100px;
+         font-size: 36px;
+      }
    }
 
    &__form {
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: start;
 

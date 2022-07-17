@@ -520,8 +520,10 @@
                   <h3 class="calculator__title">Калькулятор вартості</h3>
 
                   <ul class="calculator__list">
-                     <li class="calculator__item">
-                        <button type="button" class="calculator__button">Дизайн</button>
+                     <li class="calculator__item is-oppen" data-form-desing>
+                        <button type="button" class="calculator__button" data-button-desing>
+                           Дизайн
+                        </button>
 
                         <form autocomplete="off" class="calculator__form">
                            <label for="logo" class="calculator__check-label">
@@ -570,8 +572,10 @@
                         </form>
                      </li>
 
-                     <li class="calculator__item">
-                        <button type="button" class="calculator__button">Сайт</button>
+                     <li class="calculator__item calculator__item-position is-oppen" data-form-site>
+                        <button type="button" class="calculator__button" data-button-site>
+                           Сайт
+                        </button>
 
                         <form autocomplete="off" class="calculator__form">
                            <label class="calculator__radio-label">
@@ -667,8 +671,10 @@
                         </form>
                      </li>
 
-                     <li class="calculator__item">
-                        <button type="button" class="calculator__button">Просування</button>
+                     <li class="calculator__item is-oppen" data-form-promotion>
+                        <button type="button" class="calculator__button" data-button-promotion>
+                           Просування
+                        </button>
 
                         <form autocomplete="off" class="calculator__form">
                            <label for="seo" class="calculator__check-label">
@@ -710,7 +716,8 @@
 
                <div class="calculator__sum-box">
                   <b class="calculator__sum"
-                     >Вартість: <span class="calculator__sum-secondary-text">від &#36;</span>
+                     >Вартість:
+                     <span class="calculator__sum-secondary-text" id="sum">від &#36;</span>
                      <span class=""></span>
                   </b>
 
@@ -722,6 +729,8 @@
       <script src="./js/scrollreveal.js"></script>
       <script src="./js/mobail-menu.js"></script>
       <script src="./js/dynamic-text.js"></script>
+      <script src="./js/open-calculator.js"></script>
+      <script src="./js/calculator.js"></script>
       <!-- <script src="./js/test.js"></script> -->
    </body>
 </html>

@@ -1,5 +1,17 @@
 // -------- МИКСИНЫ --------
 // -------- Позиционированные элементы -------
 @mixin positioning($position: relative) {
-    position: $position;
+   position: $position;
+}
+
+@mixin tablet() {
+   @media screen and (min-width: 768px) {
+      @content;
+   }
+}
+
+@mixin desktop() {
+   @media screen and (min-width: 1200px) {
+      @content;
+   }
 }
