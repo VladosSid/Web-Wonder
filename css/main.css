@@ -42,7 +42,7 @@ p {
 }
 
 /* сброс отсутпов и точек в списках */
-.calculator__list, .portfolio__list, .proses__list, .nav__secondary-list, .nav__list {
+.calculator__list, .portfolio__list, .proses__list, .nav__social-network, .nav__secondary-list, .nav__list {
   padding-left: 0;
   list-style-type: none;
 }
@@ -190,6 +190,7 @@ p {
 .nav {
   position: relative;
   display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -308,6 +309,27 @@ p {
 }
 .nav__secondary-item:first-child {
   margin-top: 20px;
+}
+.nav__social-network {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.nav__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 0px;
+  border-radius: 50%;
+}
+.nav__social-icon {
+  fill: #3a5b66;
+}
+.nav__social-icon:hover, .nav__social-icon:focus {
+  fill: #ff9933;
 }
 
 .consultation {
@@ -1566,4 +1588,13 @@ p {
 .calculator__consult:hover, .calculator__consult:focus {
   border-color: #fff;
   background-color: #27454f;
+}
+
+.footer__container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer__box-logo {
+  max-width: 210px;
 }/*# sourceMappingURL=main.css.map */

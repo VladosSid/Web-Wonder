@@ -1,0 +1,11 @@
+.footer {
+   &__container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+   }
+
+   &__box-logo {
+      max-width: 210px;
+   }
+}

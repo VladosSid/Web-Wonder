@@ -112,6 +112,7 @@
 .nav {
    @include positioning;
    display: flex;
+   gap: 20px;
    justify-content: center;
    align-items: center;
 
@@ -260,6 +261,34 @@
 
    &__secondary-item:first-child {
       margin-top: 20px;
+   }
+
+   // Соцсети
+   &__social-network {
+      @extend %padding-list;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+   }
+
+   &__social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: getColor('white-color');
+      border: 0px;
+      border-radius: 50%;
+   }
+
+   &__social-icon {
+      fill: getColor('primary-color');
+
+      &:hover,
+      &:focus {
+         fill: getColor('secondary-color');
+      }
    }
 }
 
