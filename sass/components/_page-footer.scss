@@ -1,11 +1,58 @@
 .footer {
-   &__container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+   background-color: getColor('accent');
+
+   &__list-box {
+      @extend %padding-list;
+      @include tablet() {
+         display: flex;
+         gap: 20px;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
    }
 
-   &__box-logo {
-      max-width: 210px;
+   &__box-position {
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+
+      @include tablet() {
+         flex-basis: calc((100% / 2) - 20px);
+      }
+   }
+
+   // ЛОГО
+   &__logo {
+      width: 100px;
+      margin-bottom: $card-set-gap;
+   }
+
+   // соцсети
+   &__social-network {
+      @extend %padding-list;
+      display: flex;
+      gap: 10px;
+      margin-bottom: $card-set-gap;
+   }
+
+   // Иконки СоцСетей
+   &__social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border: 0;
+      border-radius: 50%;
+      background-color: getColor('white-color');
+
+      &:hover,
+      &:focus .footer__social-icon {
+         fill: getColor('secondary-color');
+      }
+   }
+
+   &__social-icon {
+      fill: getColor('primary-color');
    }
 }
