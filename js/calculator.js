@@ -1,51 +1,40 @@
-const price1 = 10;
-const price2 = 30;
-const price3 = 50;
-const price4 = 100;
+const formDesingEl = document.querySelector('[data-form="desing"]');
+const formSiteEl = document.querySelector('[data-form="site"]');
+const formSeoEl = document.querySelector('[data-form="seo"]');
+const sumEl = document.querySelector('#sum');
 
-// console.log(price1);
+let sum = 0;
 
-// const checkboxLogo = document.getElementById('logo');
-// const lableLogo = document.getElementById('logo-lable');
-// lableLogo.addEventListener('click', () => {
-//    checkboxLogo.checked = !checkboxLogo.checked;
-//    logo(checkboxLogo);
-// });
+const sumValue = event => {
+   if (event.target.checked) {
+      console.log(event.target.value);
 
-// const checkboxSiteDesign = document.getElementById('site-design');
-// const lableSiteDesign = document.getElementById('site-design');
-// lableSiteDesign.addEventListener('click', () => {
-//    checkboxSiteDesign.checked = !checkbox.checked;
-//    check(checkboxSiteDesign);
-// });
+      sum += Number(event.target.value);
+      return console.log((sumEl.textContent = Number(sum)));
+   }
 
-// let sum = 0;
-// function logo(el) {
-//    if (el.checked) {
-//       sum += price2;
-//    } else {
-//       sum -= price2;
-//    }
+   sum -= Number(event.target.value);
+   return console.log((sumEl.textContent = Number(sum)));
+};
 
-//    console.log(sum);
-// }
+let testByname = 0;
+let testType = 0;
 
-// const checkbox = document.getElementById('logo');
-// const btn = document.getElementById('btn');
-// function sumPrice() {
-// let sum = 0;
-// document.getElementById('logo').addEventListener('click', () => {
-//    if (document.getElementById('logo').checked) {
-//       sum += price2;
-//    }
+function name(ev) {
+   let counter = testByname * testType;
 
-//    console.log(sum);
-// });
+   if (ev.target.name === 'site') {
+      testByname = ev.target.value;
+   } else {
+      testType = ev.target.value;
+   }
+   console.log(testByname);
+   console.log(testType);
 
-//    document.getElementById('site-design').addEventListener('click', () => {
-//       if (document.getElementById('site-design').checked) {
-//          sum += price3;
-//       }
-//    });
-// }
-// console.log(price3);
+   sum += Number(counter);
+   return (sumEl.textContent = sum);
+}
+
+formSiteEl.addEventListener('change', name);
+formSeoEl.addEventListener('change', sumValue);
+formDesingEl.addEventListener('change', sumValue);

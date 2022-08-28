@@ -556,6 +556,7 @@
                   </picture>
                   <p class="result__name">Результат</p>
                </div>
+
                <!-- Калькулятор  -->
                <div class="calculator">
                   <h3 class="calculator__title">Калькулятор вартості</h3>
@@ -566,12 +567,13 @@
                            Дизайн
                         </button>
 
-                        <form autocomplete="off" class="calculator__form">
+                        <form autocomplete="off" class="calculator__form" data-form="desing">
                            <label id="logo-lable" for="logo" class="calculator__check-label">
                               <input
                                  type="checkbox"
                                  name="logo"
                                  id="logo"
+                                 value="30"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
@@ -583,6 +585,7 @@
                                  type="checkbox"
                                  name="site-design"
                                  id="site-design"
+                                 value="100"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
@@ -594,17 +597,19 @@
                                  type="checkbox"
                                  name="social-media-design"
                                  id="social-media-design"
+                                 value="50"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
                               <span class="calculator__name-input">Дизайн соцмереж</span>
                            </label>
 
-                           <label for="form-style" class="calculator__check-label">
+                           <label for="branded-style" class="calculator__check-label">
                               <input
                                  type="checkbox"
-                                 name="form-style"
-                                 id="form-style"
+                                 name="branded-style"
+                                 id="branded-style"
+                                 value="80"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
@@ -618,12 +623,13 @@
                            Сайт
                         </button>
 
-                        <form autocomplete="off" class="calculator__form">
+                        <form autocomplete="off" class="calculator__form" data-form="site">
                            <label class="calculator__radio-label">
                               <input
                                  type="radio"
                                  name="site"
-                                 value="site-constructor"
+                                 id="site-constructor"
+                                 value="1"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -634,7 +640,8 @@
                               <input
                                  type="radio"
                                  name="site"
-                                 value="code-layout"
+                                 id="code-layout"
+                                 value="2"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -645,7 +652,8 @@
                               <input
                                  type="radio"
                                  name="site"
-                                 value="no-way"
+                                 id="no-way-site"
+                                 value="0"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -659,7 +667,8 @@
                               <input
                                  type="radio"
                                  name="site-type"
-                                 value="landing"
+                                 id="landing"
+                                 value="200"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -670,7 +679,8 @@
                               <input
                                  type="radio"
                                  name="site-type"
-                                 value="internet-shop"
+                                 id="internet-shop"
+                                 value="450"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -681,7 +691,8 @@
                               <input
                                  type="radio"
                                  name="site-type"
-                                 value="website-business-card"
+                                 id="website-business-card"
+                                 value="200"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -692,7 +703,8 @@
                               <input
                                  type="radio"
                                  name="site-type"
-                                 value="business-website"
+                                 id="business-website"
+                                 value="300"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -703,7 +715,8 @@
                               <input
                                  type="radio"
                                  name="site-type"
-                                 value="no-way"
+                                 id="no-way-site-type"
+                                 value="0"
                                  class="calculator__radio text-delete"
                               />
                               <span class="calculator__icon-radio"></span>
@@ -717,12 +730,13 @@
                            Просування
                         </button>
 
-                        <form autocomplete="off" class="calculator__form">
+                        <form autocomplete="off" class="calculator__form" data-form="seo">
                            <label for="seo" class="calculator__check-label">
                               <input
                                  type="checkbox"
                                  name="seo"
                                  id="seo"
+                                 value="200"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
@@ -734,6 +748,7 @@
                                  type="checkbox"
                                  name="google-ads"
                                  id="google-ads"
+                                 value="150"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
@@ -745,6 +760,7 @@
                                  type="checkbox"
                                  name="copywriting"
                                  id="copywriting"
+                                 value="10"
                                  class="calculator__checkbox text-delete"
                               />
                               <span class="calculator__icon-check"></span>
@@ -758,7 +774,8 @@
                <div class="calculator__sum-box">
                   <b class="calculator__sum"
                      >Вартість:
-                     <span class="calculator__sum-secondary-text" id="sum">від &#36;</span>
+                     <span class="calculator__sum-secondary-text" >від 
+                        <span class="calculator__value" id="sum">0</span> &#36;</span>
                      <span class=""></span>
                   </b>
 
@@ -814,32 +831,32 @@
                <li class="footer__box-position">
                <p class="footer__titel-list">Послуги</p>
 
-               <ul class="footer__">
-                  <li><a href="" class="footer-nav-link">Створення лого</a></li>
-                  <li><a href="" class="footer-nav-link">Розробка сайту</a></li>
-                  <li><a href="" class="footer-nav-link">Дизайн сайту</a></li>
-                  <li><a href="" class="footer-nav-link">Ціни</a></li>
+               <ul class="footer__nav-list">
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Створення лого</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Розробка сайту</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Дизайн сайту</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Ціни</a></li>
                </ul>
                </li>
 
                <li class="footer__box-position">
                <p class="footer__titel-list">Портфоліо</p>
 
-               <ul class="footer__">
-                  <li><a href="" class="footer-nav-link">Логотипи</a></li>
-                  <li><a href="" class="footer-nav-link">Верстка сайтів</a></li>
-                  <li><a href="" class="footer-nav-link">Дизайн сайтів</a></li>
-               </ul>
-               </li>
-
+               <ul class="footer__nav-list">
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Логотипи</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Верстка сайтів</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Дизайн сайтів</a></li>
+               </ul> 
+               </li> 
+ 
                <li class="footer__box-position">
                <p class="footer__titel-list">Допомога</p>
 
-               <ul class="footer__">
-                  <li><a href="" class="footer-nav-link">Про нас</a></li>
-                  <li><a href="" class="footer-nav-link">Співпраця</a></li>
-                  <li><a href="" class="footer-nav-link">Політика конфіденційності</a></li>
-                  <li><a href="" class="footer-nav-link">Умови використання</a></li>
+               <ul class="footer__nav-list">
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Про нас</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Співпраця</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Політика конфіденційності</a></li>
+                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Умови використання</a></li>
                </ul>
                </li>
             </ul>

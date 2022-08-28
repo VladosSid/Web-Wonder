@@ -7,7 +7,7 @@
          display: flex;
          gap: 20px;
          flex-wrap: wrap;
-         justify-content: space-between;
+         justify-content: space-evenly;
       }
    }
 
@@ -16,7 +16,7 @@
          margin-bottom: 30px;
       }
 
-      @include tablet() {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
          flex-basis: calc((100% / 2) - 20px);
       }
    }
@@ -46,7 +46,7 @@
       border-radius: 50%;
       background-color: getColor('white-color');
 
-      &:hover,
+      &:hover .footer__social-icon,
       &:focus .footer__social-icon {
          fill: getColor('secondary-color');
       }
@@ -54,5 +54,55 @@
 
    &__social-icon {
       fill: getColor('primary-color');
+
+      transition: fill $timing-function-cubic;
+   }
+
+   &__copyright {
+      font-size: 12px;
+      line-height: 1.55;
+      color: getColor('white-text');
+
+      @include desktop() {
+         font-size: 14px;
+      }
+   }
+
+   // футер услуги
+   &__titel-list {
+      font-size: 20px;
+      line-height: 1.55;
+      color: getColor('footer-text');
+
+      margin-bottom: 15px;
+
+      @include desktop() {
+         font-size: 24px;
+      }
+   }
+
+   &__nav-list {
+      @extend %padding-list;
+   }
+
+   &__nav-item:not(:last-child) {
+      margin-bottom: 5px;
+   }
+
+   &__nav-link {
+      font-size: 12px;
+      line-height: 1.55;
+      color: getColor('white-text');
+
+      transition: color $timing-function-cubic;
+
+      &:hover,
+      &:focus {
+         color: getColor('secondary-accent');
+      }
+
+      @include desktop() {
+         font-size: 14px;
+      }
    }
 }
