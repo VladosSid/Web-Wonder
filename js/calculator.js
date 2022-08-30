@@ -21,18 +21,19 @@ let testByname = 0;
 let testType = 0;
 
 function name(ev) {
-   let counter = testByname * testType;
+   let zero = testByname * testType;
+   sum -= Number(zero);
 
    if (ev.target.name === 'site') {
       testByname = ev.target.value;
    } else {
       testType = ev.target.value;
    }
-   console.log(testByname);
-   console.log(testType);
 
+   let counter = testByname * testType;
    sum += Number(counter);
-   return (sumEl.textContent = sum);
+
+   sumEl.textContent = sum;
 }
 
 formSiteEl.addEventListener('change', name);
