@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="uk">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Створення логотипу</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="./css/main.min.css" />
+   </head>
+   <body>
+      <header class="header">
+         <div class="container header__box">
+            <!-- Логтотип -->
+            <a href="./index.html" class="header__logo">
+               <picture>
+                  <source srcset="./img/logo.webp" type="image/webp" />
+                  <img src="./img/logo.png" alt="Логотип Web Wonder" class="img-position" />
+               </picture>
+            </a>
+
+            <!-- Кнопки мобильнго меню -->
+            <button
+               type="button"
+               class="header__button-mobail"
+               aria-controls="menu-container"
+               aria-expanded="true"
+            >
+               <svg
+                  class="header__icon"
+                  width="30"
+                  height="30"
+                  aria-label="Переключатель мобильного меню"
+               >
+                  <use class="header__icon-menu" href="./img/symbol-defs.svg#menu"></use>
+                  <use class="header__icon-cross" href="./img/symbol-defs.svg#cross"></use>
+               </svg>
+            </button>
+
+            <!-- Мобильное меню -->
+            <div class="header__menu-mobail" id="menu-container">
+               <nav class="nav">
+                  <ul class="nav__list">
+                     <li class="nav__item nav__item--position">
+                        <a href="" class="nav__link nav__link--secondary"
+                           >Послуги
+                           <svg width="10" height="10" class="nav__open-secondary-menu">
+                              <use href="./img/symbol-defs.svg#open-secondary-menu"></use>
+                           </svg>
+                        </a>
+
+                        <ul class="nav__secondary-list">
+                           <li class="nav__secondary-item">
+                              <a href="./page_logo-creation.html" class="nav__secondary-link"
+                                 >Створення лого</a
+                              >
+                           </li>
+                           <li class="nav__secondary-item">
+                              <a href="" class="nav__secondary-link">Розробка сайту</a>
+                           </li>
+                           <li class="nav__secondary-item">
+                              <a href="" class="nav__secondary-link">Просування сайту</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav__item">
+                        <a href="./index.html/#calculator" class="nav__link">Вартість</a>
+                     </li>
+                     <li class="nav__item">
+                        <a href="./index.html/#portfolio" class="nav__link">Портфоліо</a>
+                     </li>
+                     <li class="nav__item">
+                        <a href="" class="nav__link">Про нас</a>
+                     </li>
+                  </ul>
+
+                  <ul class="nav__social-network">
+                     <li class="nav__social-item">
+                        <a
+                           href="https://www.instagram.com/web.wonder.ua/"
+                           target="_blank"
+                           class="nav__social-link"
+                        >
+                           <svg class="nav__social-icon" width="15" height="15">
+                              <use href="./img/symbol-defs.svg#instagram"></use>
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="nav__social-item">
+                        <a href="https://t.me/webwonder" target="_blank" class="nav__social-link">
+                           <svg class="nav__social-icon" width="15" height="15">
+                              <use href="./img/symbol-defs.svg#telegram"></use>
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
+
+                  <a href="" class="consultation">Консультація</a>
+               </nav>
+            </div>
+
+            <!-- меню таблетки и ПК -->
+            <nav class="nav nav--hidden">
+               <ul class="nav__list">
+                  <li class="nav__item nav__item--position">
+                     <a href="" class="nav__link nav__link--secondary"
+                        >Послуги
+                        <svg width="8" height="8" class="nav__open-secondary-menu">
+                           <use href="./img/symbol-defs.svg#open-secondary-menu"></use>
+                        </svg>
+                     </a>
+
+                     <ul class="nav__secondary-list">
+                        <li class="nav__secondary-item">
+                           <a href="" class="nav__secondary-link">Створення лого</a>
+                        </li>
+                        <li class="nav__secondary-item">
+                           <a href="" class="nav__secondary-link">Розробка сайту</a>
+                        </li>
+                        <li class="nav__secondary-item">
+                           <a href="" class="nav__secondary-link">Просування сайту</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">
+                     <a href="./index.html/#calculator" class="nav__link">Вартість</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="./index.html/#portfolio" class="nav__link">Портфоліо</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="" class="nav__link">Про нас</a>
+                  </li>
+               </ul>
+               <ul class="nav__social-network">
+                  <li class="nav__social-item">
+                     <a
+                        href="https://www.instagram.com/web.wonder.ua/"
+                        target="_blank"
+                        class="nav__social-link"
+                     >
+                        <svg class="nav__social-icon" width="15" height="15">
+                           <use href="./img/symbol-defs.svg#instagram"></use>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="nav__social-item">
+                     <a href="https://t.me/webwonder" target="_blank" class="nav__social-link">
+                        <svg class="nav__social-icon" width="15" height="15">
+                           <use href="./img/symbol-defs.svg#telegram"></use>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+
+               <a href="" class="consultation">Консультація</a>
+            </nav>
+         </div>
+      </header>
+
+      <main>
+         <section class="section hero-logo">
+            <h1 class="hero-logo__titel">Створення лого</h1>
+            <ul class="hero-logo__list">
+               <li class="hero-logo__item"><a href="" class="hero-logo__link">Портфоліо</a></li>
+               <li class="hero-logo__item">
+                  <a href="" class="hero-logo__link">Як ми працюемо</a>
+               </li>
+               <li class="hero-logo__item"><a href="" class="hero-logo__link">Ціна</a></li>
+               <li class="hero-logo__item">
+                  <button type="button" class="hero-logo__link">Заповнити бриф</button>
+               </li>
+            </ul>
+         </section>
+      </main>
+
+      <footer class="footer section">
+         <div class="container">
+            <ul class="footer__list-box">
+               <li class="footer__box-position">
+                  <img src="./img/logo.webp" alt="Logo Web Wonder" class="footer__logo" />
+
+                  <ul class="footer__social-network">
+                     <li>
+                        <a
+                           href="https://www.instagram.com/web.wonder.ua/"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#instagram"></use>
+                           </svg>
+                        </a>
+                     </li>
+
+                     <li>
+                        <a
+                           href="https://t.me/webwonder"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#telegram"></use>
+                           </svg>
+                        </a>
+                     </li>
+
+                     <li>
+                        <a
+                           href="https://api.whatsapp.com/send/?phone=%2B380630539231&text&type=phone_number&app_absent=0"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#whatsapp"></use>
+                           </svg>
+                        </a>
+                     </li>
+
+                     <li>
+                        <a
+                           href="mailto:webwonder.team@gmail.com"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#email"></use>
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
+
+                  <p class="footer__copyright">&#xa9; 2022 Web Wonder</p>
+               </li>
+
+               <li class="footer__box-position">
+                  <p class="footer__titel-list">Послуги</p>
+
+                  <ul class="footer__nav-list">
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Створення лого</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Розробка сайту</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Дизайн сайту</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="./index.html/#calculator" class="footer__nav-link">Ціни</a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li class="footer__box-position">
+                  <p class="footer__titel-list">Портфоліо</p>
+
+                  <ul class="footer__nav-list">
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Логотипи</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Верстка сайтів</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Дизайн сайтів</a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li class="footer__box-position">
+                  <p class="footer__titel-list">Допомога</p>
+
+                  <ul class="footer__nav-list">
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Про нас</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Співпраця</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Політика конфіденційності</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Умови використання</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </footer>
+   </body>
+</html>

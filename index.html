@@ -25,12 +25,15 @@
    <body>
       <header class="header">
          <div class="container header__box">
+            <!-- Логтотип -->
             <a href="./" class="header__logo">
                <picture>
                   <source srcset="./img/logo.webp" type="image/webp" />
                   <img src="./img/logo.png" alt="Логотип Web Wonder" class="img-position" />
                </picture>
             </a>
+
+            <!-- Кнопки мобильнго меню -->
             <button
                type="button"
                class="header__button-mobail"
@@ -47,6 +50,8 @@
                   <use class="header__icon-cross" href="./img/symbol-defs.svg#cross"></use>
                </svg>
             </button>
+
+            <!-- Мобильное меню -->
             <div class="header__menu-mobail" id="menu-container">
                <nav class="nav">
                   <ul class="nav__list">
@@ -60,7 +65,9 @@
 
                         <ul class="nav__secondary-list">
                            <li class="nav__secondary-item">
-                              <a href="" class="nav__secondary-link">Створення лого</a>
+                              <a href="./page_logo-creation.html" class="nav__secondary-link"
+                                 >Створення лого</a
+                              >
                            </li>
                            <li class="nav__secondary-item">
                               <a href="" class="nav__secondary-link">Розробка сайту</a>
@@ -70,9 +77,11 @@
                            </li>
                         </ul>
                      </li>
-                     <li class="nav__item"><a href="" class="nav__link">Вартість</a></li>
-                     <li class="nav__item"><a href="" class="nav__link">Портфоліо</a></li>
-                     <li class="nav__item"><a href="" class="nav__link">Про нас</a></li>
+                     <li class="nav__item"><a href="#calculator" class="nav__link">Вартість</a></li>
+                     <li class="nav__item"><a href="#portfolio" class="nav__link">Портфоліо</a></li>
+                     <li class="nav__item">
+                        <a href="" class="nav__link">Про нас</a>
+                     </li>
                   </ul>
 
                   <ul class="nav__social-network">
@@ -100,10 +109,11 @@
                </nav>
             </div>
 
+            <!-- меню таблетки и ПК -->
             <nav class="nav nav--hidden">
                <ul class="nav__list">
                   <li class="nav__item nav__item--position">
-                     <a href="./test.html" class="nav__link nav__link--secondary"
+                     <a href="" class="nav__link nav__link--secondary"
                         >Послуги
                         <svg width="8" height="8" class="nav__open-secondary-menu">
                            <use href="./img/symbol-defs.svg#open-secondary-menu"></use>
@@ -122,9 +132,11 @@
                         </li>
                      </ul>
                   </li>
-                  <li class="nav__item"><a href="" class="nav__link">Вартість</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Портфоліо</a></li>
-                  <li class="nav__item"><a href="" class="nav__link">Про нас</a></li>
+                  <li class="nav__item"><a href="#calculator" class="nav__link">Вартість</a></li>
+                  <li class="nav__item"><a href="#portfolio" class="nav__link">Портфоліо</a></li>
+                  <li class="nav__item">
+                     <a href="" class="nav__link">Про нас</a>
+                  </li>
                </ul>
                <ul class="nav__social-network">
                   <li class="nav__social-item">
@@ -448,7 +460,7 @@
             </div>
          </section>
 
-         <section class="portfolio section">
+         <section class="portfolio section" id="portfolio">
             <div class="container portfolio__global-box">
                <h2 class="portfolio__title">Портфоліо</h2>
 
@@ -558,7 +570,7 @@
                </div>
 
                <!-- Калькулятор  -->
-               <div class="calculator">
+               <div class="calculator" id="calculator">
                   <h3 class="calculator__title">Калькулятор вартості</h3>
 
                   <ul class="calculator__list">
@@ -774,8 +786,9 @@
                <div class="calculator__sum-box">
                   <b class="calculator__sum"
                      >Вартість:
-                     <span class="calculator__sum-secondary-text" >від 
-                        <span class="calculator__value" id="sum">0</span> &#36;</span>
+                     <span class="calculator__sum-secondary-text"
+                        >від <span class="calculator__value" id="sum">0</span> &#36;</span
+                     >
                      <span class=""></span>
                   </b>
 
@@ -789,75 +802,113 @@
          <div class="container">
             <ul class="footer__list-box">
                <li class="footer__box-position">
-               <img src="./img/logo.webp" alt="Logo Web Wonder" class="footer__logo"/>
+                  <img src="./img/logo.webp" alt="Logo Web Wonder" class="footer__logo" />
 
-               <ul class="footer__social-network">
-                  <li>
-                     <a href="" class="footer__social-link">
-                        <svg width="15" height="15" class="footer__social-icon">
-                           <use href="./img/symbol-defs.svg#instagram"></use>
-                        </svg>
-                     </a>
-                  </li>
+                  <ul class="footer__social-network">
+                     <li>
+                        <a
+                           href="https://www.instagram.com/web.wonder.ua/"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#instagram"></use>
+                           </svg>
+                        </a>
+                     </li>
 
-                  <li>
-                     <a href="" class="footer__social-link">
-                        <svg width="15" height="15" class="footer__social-icon">
-                           <use href="./img/symbol-defs.svg#telegram"></use>
-                        </svg>
-                     </a>
-                  </li>
+                     <li>
+                        <a
+                           href="https://t.me/webwonder"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#telegram"></use>
+                           </svg>
+                        </a>
+                     </li>
 
-                  <li>
-                     <a href="" class="footer__social-link">
-                        <svg width="15" height="15" class="footer__social-icon">
-                           <use href="./img/symbol-defs.svg#whatsapp"></use>
-                        </svg>
-                     </a>
-                  </li>
+                     <li>
+                        <a
+                           href="https://api.whatsapp.com/send/?phone=%2B380630539231&text&type=phone_number&app_absent=0"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#whatsapp"></use>
+                           </svg>
+                        </a>
+                     </li>
 
-                  <li>
-                     <a href="" class="footer__social-link">
-                        <svg width="15" height="15" class="footer__social-icon">
-                           <use href="./img/symbol-defs.svg#email"></use>
-                        </svg>
-                     </a>
-                  </li>
-               </ul>
+                     <li>
+                        <a
+                           href="mailto:webwonder.team@gmail.com"
+                           class="footer__social-link"
+                           target="_blank"
+                        >
+                           <svg width="15" height="15" class="footer__social-icon">
+                              <use href="./img/symbol-defs.svg#email"></use>
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
 
-               <p class="footer__copyright">&#xa9 2022 Web Wonder</p>
+                  <p class="footer__copyright">&#xa9; 2022 Web Wonder</p>
                </li>
 
                <li class="footer__box-position">
-               <p class="footer__titel-list">Послуги</p>
+                  <p class="footer__titel-list">Послуги</p>
 
-               <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Створення лого</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Розробка сайту</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Дизайн сайту</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Ціни</a></li>
-               </ul>
+                  <ul class="footer__nav-list">
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Створення лого</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Розробка сайту</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Дизайн сайту</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="#calculator" class="footer__nav-link">Ціни</a>
+                     </li>
+                  </ul>
                </li>
 
                <li class="footer__box-position">
-               <p class="footer__titel-list">Портфоліо</p>
+                  <p class="footer__titel-list">Портфоліо</p>
 
-               <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Логотипи</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Верстка сайтів</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Дизайн сайтів</a></li>
-               </ul> 
-               </li> 
- 
+                  <ul class="footer__nav-list">
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Логотипи</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Верстка сайтів</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Дизайн сайтів</a>
+                     </li>
+                  </ul>
+               </li>
+
                <li class="footer__box-position">
-               <p class="footer__titel-list">Допомога</p>
+                  <p class="footer__titel-list">Допомога</p>
 
-               <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Про нас</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Співпраця</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Політика конфіденційності</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Умови використання</a></li>
-               </ul>
+                  <ul class="footer__nav-list">
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Про нас</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Співпраця</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Політика конфіденційності</a>
+                     </li>
+                     <li class="footer__nav-item">
+                        <a href="" class="footer__nav-link">Умови використання</a>
+                     </li>
+                  </ul>
                </li>
             </ul>
          </div>

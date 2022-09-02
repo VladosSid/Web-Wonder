@@ -3,6 +3,10 @@
 @import 'utils/breakpoints';
 @import 'utils/global_style';
 
+// эллементы
+@import 'elements/button';
+
+// главная старинца
 @import 'components/page-header';
 @import 'components/page-primery';
 @import 'components/page-proses';
@@ -11,3 +15,6 @@
 @import 'components/page-result';
 @import 'components/page-result-calculator';
 @import 'components/page-footer';
+
+// Страница Создание лого
+@import 'components/page-logo/hero-logo';

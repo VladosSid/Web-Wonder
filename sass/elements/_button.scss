@@ -1,0 +1,34 @@
+@mixin buttonSecondary($colorBorder, $colorBGC, $colorText, $hoverBGC, $hoverBorder) {
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 130px;
+   height: 30px;
+
+   font-size: 10px;
+   line-height: 1.55;
+   font-weight: 900;
+
+   border: 2px solid getColor($colorBorder);
+   border-radius: 15px;
+
+   background-color: getColor($colorBGC);
+   color: getColor($colorText);
+
+   transition: color $timing-function-cubic, background-color $timing-function-cubic;
+
+   &:hover,
+   &:focus {
+      background-color: getColor($hoverBGC);
+      border-color: getColor($hoverBorder);
+   }
+
+   @media screen and (min-width: $tablet) {
+      font-size: 12px;
+   }
+
+   @media screen and (min-width: $desktop) {
+      font-size: 14px;
+   }
+}

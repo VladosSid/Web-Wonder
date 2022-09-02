@@ -1,0 +1,33 @@
+.hero-logo {
+   background: getColor('primary-color');
+
+   &__titel {
+      margin-bottom: $card-set-gap;
+      font-family: $fontPrimery;
+      font-size: 56px;
+      font-weight: 700;
+      text-align: center;
+
+      color: getColor('white-text');
+      line-height: 1.05;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $card-set-gap;
+
+      @extend %padding-list;
+   }
+
+   &__link {
+      @include buttonSecondary(
+         'secondary-color',
+         'primary-color',
+         'white-text',
+         'accent',
+         'global-bacground'
+      );
+   }
+}
