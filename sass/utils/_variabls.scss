@@ -1,13 +1,34 @@
 $colors: (
    'global-bacground': #ffffff,
+   'dark-text': #000,
    'primary-color': #3a5b66,
    'secondary-color': #ff9933,
    'white-text': #ffffff,
    'secondary-text': #0a5b66,
+   'primary-text': #3a5b66,
    'accent': #27454f,
    'secondary-accent': #fe9123,
    'white-color': #fff,
    'footer-text': #98acb3,
+
+   // Цвета палитры:
+   'section-2-1': #4ec600,
+   'section-2-2': #122545,
+
+   'section-3-1': #c41a2f,
+
+   'section-4-1': #f4220c,
+   'section-4-2': #343f88,
+
+   'section-6-1': #e24261,
+
+   'section-7-1': #dacb31,
+
+   'section-8-1': #c09597,
+   'section-8-2': #f2c0bb,
+
+   'section-9-1': #c18a65,
+   'section-9-2': #e6b363,
 );
 
 @function getColor($key) {

@@ -2,7 +2,7 @@
 ScrollReveal().reveal('.proses__discussion--scroll', {
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 500,
+   delay: 200,
 });
 // ------ провяленние блока описания слева
 ScrollReveal().reveal('.proses__box-positioning--left', {
@@ -10,13 +10,13 @@ ScrollReveal().reveal('.proses__box-positioning--left', {
    distance: '100px',
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 1500,
+   delay: 500,
 });
 // ------- проявленние точки на прямой скцимя 2-----
 ScrollReveal().reveal('.proses__task--scroll', {
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 500,
+   delay: 200,
 });
 // ------ провяленние блока описания с права скуция 2
 ScrollReveal().reveal('.proses__box-positioning--right', {
@@ -24,26 +24,26 @@ ScrollReveal().reveal('.proses__box-positioning--right', {
    distance: '100px',
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 1500,
+   delay: 500,
 });
 
 // ------- проявленние точки на прямой скцимя 3-----
 ScrollReveal().reveal('.proses__work--scroll', {
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 500,
+   delay: 200,
 });
 
 // ------- проявленние точки на прямой скцимя 4-----
 ScrollReveal().reveal('.proses__edits--scroll', {
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 500,
+   delay: 200,
 });
 
 // ------- проявленние точки на прямой скцимя 5-----
 ScrollReveal().reveal('.proses__resoult--scroll', {
    easing: 'ease-in-out',
    duration: 1500,
-   delay: 500,
+   delay: 200,
 });

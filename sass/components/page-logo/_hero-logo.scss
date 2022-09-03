@@ -19,6 +19,12 @@
       gap: $card-set-gap;
 
       @extend %padding-list;
+
+      @include tablet() {
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
    }
 
    &__link {

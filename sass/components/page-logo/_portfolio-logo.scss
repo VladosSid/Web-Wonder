@@ -1,0 +1,316 @@
+.portfolio-logo {
+   &__containe-el {
+      @include positioning;
+      // width: 480px;
+
+      padding-top: 80px;
+      padding-bottom: $card-set-gap;
+
+      // @include tablet() {
+      //    width: 768px;
+      // }
+
+      // @include desktop() {
+      //    width: 1200px;
+      // }
+
+      &:nth-child(1) {
+         padding-top: $card-set-gap;
+
+         @include tablet() {
+            padding-top: 40px;
+         }
+      }
+
+      &:not(:last-child) {
+         &::before {
+            content: '';
+            display: block;
+
+            width: 100vw;
+            height: 40px;
+            @include positioning(absolute);
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            transform: translateY(39px);
+            clip-path: polygon(0 0, 100% 0, 100% 76%);
+
+            background: getColor('white-color');
+
+            @media screen and (min-width: $tablet) {
+               height: 60px;
+
+               transform: translateY(59px);
+            }
+         }
+      }
+
+      &:nth-child(2n) {
+         background-color: getColor('primary-color');
+         &::before {
+            content: '';
+            display: block;
+
+            width: 100vw;
+            height: 40px;
+            @include positioning(absolute);
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            transform: translateY(39px);
+            clip-path: polygon(0 0, 100% 0, 0 72%);
+
+            background: getColor('primary-color');
+
+            @media screen and (min-width: $tablet) {
+               height: 60px;
+
+               transform: translateY(59px);
+            }
+         }
+      }
+   }
+   // Описание + картинка
+   &__box-description {
+      display: flex;
+      gap: $card-set-gap;
+      margin-bottom: $card-set-gap;
+   }
+
+   &__box-description-secondary {
+      display: flex;
+      flex-direction: row-reverse;
+
+      gap: $card-set-gap;
+      margin-bottom: $card-set-gap;
+   }
+
+   &__img-logo {
+      width: 50%;
+   }
+
+   &__dscr {
+      width: 50%;
+   }
+
+   // текст описания
+   &__text-description {
+      line-height: 1.57;
+      font-size: 14px;
+
+      margin-bottom: $card-set-gap;
+   }
+
+   &__text-description-secondary {
+      line-height: 1.57;
+      font-size: 14px;
+
+      color: getColor('white-text');
+
+      margin-bottom: $card-set-gap;
+   }
+
+   // список характеристик
+   &__item-description {
+      @include positioning();
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $card-set-gap;
+
+      &:not(:last-child) {
+         margin-bottom: $card-set-gap;
+      }
+   }
+
+   &__name-style {
+      display: block;
+      text-align: center;
+
+      font-size: 12px;
+      line-height: 1.56;
+
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 100px;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      border-radius: 10px;
+
+      @include tablet() {
+         font-size: 14px;
+      }
+
+      @include desktop() {
+         font-size: 16px;
+      }
+   }
+
+   &__name-style-secondary {
+      display: block;
+      text-align: center;
+
+      font-size: 12px;
+      line-height: 1.56;
+
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 100px;
+
+      color: getColor('primary-color');
+      background: getColor('white-color');
+
+      border-radius: 10px;
+
+      @include tablet() {
+         font-size: 14px;
+      }
+
+      @include desktop() {
+         font-size: 16px;
+      }
+   }
+
+   &__value-style {
+      font-size: 12px;
+      line-height: 1.56;
+
+      @include tablet() {
+         font-size: 14px;
+      }
+
+      @include desktop() {
+         font-size: 16px;
+      }
+   }
+
+   &__value-style-secondary {
+      font-size: 12px;
+      line-height: 1.56;
+
+      color: getColor('white-text');
+
+      @include tablet() {
+         font-size: 14px;
+      }
+
+      @include desktop() {
+         font-size: 16px;
+      }
+   }
+
+   // Палитра
+   // Секция 1
+   &__palette-1-1 {
+      @include palette('global-bacground', 'dark-text');
+   }
+
+   &__palette-1-2 {
+      @include palette('dark-text', 'dark-text');
+      @include positioning(absolute);
+      z-index: -1;
+      left: 140px;
+   }
+
+   // Сукция 2
+   &__palette-2-1 {
+      @include palette('section-2-1', 'section-2-1');
+      @include positioning(relative);
+      z-index: 2;
+   }
+
+   &__palette-2-2 {
+      @include palette('section-2-2', 'section-2-2');
+      @include positioning(absolute);
+      z-index: 1;
+      left: 140px;
+   }
+
+   &__palette-2-3 {
+      @include palette('white-color', 'white-color');
+      @include positioning(absolute);
+      left: 160px;
+   }
+
+   // Секуия 3
+   &__palette-3-1 {
+      @include palette('dark-text', 'global-bacground');
+      @include positioning(relative);
+      z-index: 2;
+   }
+
+   &__palette-3-2 {
+      @include palette('section-3-1', 'white-color');
+      @include positioning(absolute);
+      z-index: 1;
+      left: 140px;
+   }
+
+   // сукция 4
+   &__palette-4-1 {
+      @include palette('section-4-1', 'global-bacground');
+      @include positioning(relative);
+      z-index: 2;
+   }
+
+   &__palette-4-2 {
+      @include palette('white-color', 'global-bacground');
+      @include positioning(absolute);
+      z-index: 1;
+      left: 140px;
+   }
+
+   &__palette-4-3 {
+      @include palette('section-4-2', 'global-bacground');
+      @include positioning(absolute);
+      z-index: 0;
+      left: 160px;
+   }
+
+   // сукция 5
+   &__palette-5-1 {
+      @include palette('global-bacground', 'dark-text');
+      @include positioning();
+      z-index: 1;
+   }
+
+   &__palette-5-2 {
+      @include palette('dark-text', 'global-bacground');
+      left: 140px;
+   }
+   // сукция 6
+   &__palette-6-1 {
+      @include palette('sectyon-6-1', 'sectyon-6-1');
+      @include positioning(absolute);
+      z-index: 2;
+   }
+
+   &__palette-6-2 {
+      @include palette('global-bacground', 'global-bacground');
+      @include positioning(absolute);
+      z-index: 1;
+   }
+
+   &__palette-6-3 {
+      @include palette('dark-text', 'global-bacground');
+      left: 140px;
+   }
+   // сукция 7
+   // сукция 8
+   // сукция 9
+
+   // Галлерея
+   &__box-img {
+      display: flex;
+      justify-content: center;
+      height: 200px;
+   }
+
+   &__img-gallery {
+      object-fit: contain;
+      object-position: 50% 50%;
+   }
+}

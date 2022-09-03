@@ -5,6 +5,7 @@
 
 // эллементы
 @import 'elements/button';
+@import 'elements/palette-portfolio.scss';
 
 // главная старинца
 @import 'components/page-header';
@@ -18,3 +19,4 @@
 
 // Страница Создание лого
 @import 'components/page-logo/hero-logo';
+@import 'components/page-logo/portfolio-logo';
