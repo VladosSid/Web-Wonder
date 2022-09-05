@@ -1,0 +1,115 @@
+.work-process {
+   background: getColor('primary-color');
+   &__titel {
+      font-size: 30px;
+      line-height: 1.23;
+
+      text-align: center;
+
+      margin-bottom: $card-set-gap;
+
+      color: getColor('white-text');
+
+      @include tablet() {
+         font-size: 38px;
+      }
+
+      @include desktop() {
+         font-size: 46px;
+      }
+   }
+
+   &__list {
+      @include positioning();
+
+      @include desktop() {
+         display: flex;
+         gap: $card-set-gap;
+
+         padding-top: 50px;
+      }
+      &::after {
+         content: '';
+         @include positioning(absolute);
+         top: 0;
+         left: 10px;
+
+         width: 1px;
+         height: 85%;
+         background: getColor('white-color');
+
+         @include desktop() {
+            top: 10px;
+            left: 55px;
+
+            width: 75%;
+            height: 1px;
+         }
+      }
+   }
+
+   &__item {
+      @include positioning();
+      flex-basis: calc((100% - 60px) / 4);
+      margin-bottom: $card-set-gap;
+   }
+
+   &__decorate {
+      @include positioning(absolute);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      top: 0;
+      left: -47px;
+      z-index: 1;
+
+      width: 35px;
+      height: 35px;
+
+      border: 2px solid getColor('white-color');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      font-size: 20px;
+
+      @include desktop() {
+         top: -57px;
+         left: 0;
+      }
+   }
+
+   &__action {
+      line-height: 1.35;
+      font-size: 16px;
+
+      color: getColor('white-text');
+
+      margin-bottom: 10px;
+
+      @include tablet() {
+         font-size: 18px;
+      }
+
+      @include desktop() {
+         font-size: 20px;
+      }
+   }
+
+   &__descryption {
+      line-height: 1.45;
+      font-size: 12px;
+
+      color: getColor('white-text');
+
+      @include tablet() {
+         font-size: 14px;
+      }
+
+      @include desktop() {
+         font-size: 16px;
+      }
+   }
+}
