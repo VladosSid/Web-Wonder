@@ -9,3 +9,152 @@
 
    rotate: 45deg;
 }
+
+// Палитра
+// Секция 1
+.portfolio-logo__palette-1-1 {
+   @include palette('global-bacground', 'dark-text');
+}
+
+.portfolio-logo__palette-1-2 {
+   @include palette('dark-text', 'dark-text');
+   position: absolute;
+   z-index: -1;
+   left: 140px;
+}
+
+// Секция 2
+.portfolio-logo__palette-2-1 {
+   @include palette('section-2-1', 'section-2-1');
+   position: relative;
+   z-index: 2;
+}
+
+.portfolio-logo__palette-2-2 {
+   @include palette('section-2-2', 'section-2-2');
+   position: absolute;
+   z-index: 1;
+   left: 140px;
+}
+
+.portfolio-logo__palette-2-3 {
+   @include palette('white-color', 'white-color');
+   position: absolute;
+   left: 160px;
+}
+
+// Секуия 3
+.portfolio-logo__palette-3-1 {
+   @include palette('dark-text', 'global-bacground');
+   position: relative;
+   z-index: 2;
+}
+
+.portfolio-logo__palette-3-2 {
+   @include palette('section-3-1', 'white-color');
+   position: absolute;
+   z-index: 1;
+   left: 140px;
+}
+
+// Секция 4
+.portfolio-logo__palette-4-1 {
+   @include palette('section-4-1', 'global-bacground');
+   position: relative;
+   z-index: 2;
+}
+
+.portfolio-logo__palette-4-2 {
+   @include palette('white-color', 'global-bacground');
+   position: absolute;
+   z-index: 1;
+   left: 140px;
+}
+
+.portfolio-logo__palette-4-3 {
+   @include palette('section-4-2', 'global-bacground');
+   position: absolute;
+   z-index: 0;
+   left: 160px;
+}
+
+// Секция 5
+.portfolio-logo__palette-5-1 {
+   @include palette('global-bacground', 'dark-text');
+   position: relative;
+   z-index: 1;
+}
+
+.portfolio-logo__palette-5-2 {
+   @include palette('dark-text', 'global-bacground');
+   position: relative;
+   right: 30px;
+}
+// Секция 6
+.portfolio-logo__palette-6-1 {
+   @include palette('section-6-1', 'section-6-1');
+   position: absolute;
+   z-index: 2;
+   left: 120px;
+}
+
+.portfolio-logo__palette-6-2 {
+   @include palette('global-bacground', 'global-bacground');
+   position: absolute;
+   z-index: 1;
+   left: 140px;
+}
+
+.portfolio-logo__palette-6-3 {
+   @include palette('dark-text', 'dark-text');
+   position: absolute;
+   left: 160px;
+}
+// Секция 7
+.portfolio-logo__palette-7-1 {
+   @include palette('section-7-1', 'section-7-1');
+   position: absolute;
+   z-index: 1;
+   left: 120px;
+}
+
+.portfolio-logo__palette-7-2 {
+   @include palette('dark-text', 'dark-text');
+   position: absolute;
+   z-index: 0;
+   left: 140px;
+}
+// Секция 8
+.portfolio-logo__palette-8-1 {
+   @include palette('section-8-1', 'section-8-1');
+   position: absolute;
+   z-index: 2;
+   left: 120px;
+}
+
+.portfolio-logo__palette-8-2 {
+   @include palette('section-8-2', 'section-8-2');
+   position: absolute;
+   z-index: 1;
+   left: 140px;
+}
+
+.portfolio-logo__palette-8-3 {
+   @include palette('dark-text', 'dark-text');
+   position: absolute;
+   left: 160px;
+}
+
+// секция 9
+.portfolio-logo__palette-9-1 {
+   @include palette('section-9-1', 'section-9-1');
+   position: absolute;
+   z-index: 1;
+   left: 120px;
+}
+
+.portfolio-logo__palette-9-2 {
+   @include palette('section-9-2', 'section-9-2');
+   position: absolute;
+   left: 140px;
+}

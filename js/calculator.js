@@ -3,26 +3,29 @@ const formSiteEl = document.querySelector('[data-form="site"]');
 const formSeoEl = document.querySelector('[data-form="seo"]');
 const sumEl = document.querySelector('#sum');
 
-let sum = 0;
+const vareabls = {
+   sum: 0,
+};
+// let sum = 0;
+
+let testByname = 0;
+let testType = 0;
 
 const sumValue = event => {
    if (event.target.checked) {
       console.log(event.target.value);
 
-      sum += Number(event.target.value);
-      return console.log((sumEl.textContent = Number(sum)));
+      vareabls.sum += Number(event.target.value);
+      return console.log((sumEl.textContent = Number(vareabls.sum)));
    }
 
-   sum -= Number(event.target.value);
-   return console.log((sumEl.textContent = Number(sum)));
+   vareabls.sum -= Number(event.target.value);
+   return console.log((sumEl.textContent = Number(vareabls.sum)));
 };
-
-let testByname = 0;
-let testType = 0;
 
 function name(ev) {
    let zero = testByname * testType;
-   sum -= Number(zero);
+   vareabls.sum -= Number(zero);
 
    if (ev.target.name === 'site') {
       testByname = ev.target.value;
@@ -31,9 +34,9 @@ function name(ev) {
    }
 
    let counter = testByname * testType;
-   sum += Number(counter);
+   vareabls.sum += Number(counter);
 
-   sumEl.textContent = sum;
+   sumEl.textContent = vareabls.sum;
 }
 
 formSiteEl.addEventListener('change', name);

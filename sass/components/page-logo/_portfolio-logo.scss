@@ -1,18 +1,14 @@
 .portfolio-logo {
    &__containe-el {
       @include positioning;
-      // width: 480px;
+      height: 500px;
 
       padding-top: 80px;
       padding-bottom: $card-set-gap;
 
-      // @include tablet() {
-      //    width: 768px;
-      // }
-
-      // @include desktop() {
-      //    width: 1200px;
-      // }
+      @include tablet() {
+         height: 700px;
+      }
 
       &:nth-child(1) {
          padding-top: $card-set-gap;
@@ -71,27 +67,42 @@
          }
       }
    }
-   // Описание + картинка
-   &__box-description {
-      display: flex;
+
+   &__contain {
+      display: grid;
       gap: $card-set-gap;
-      margin-bottom: $card-set-gap;
+      grid-template-columns: 1fr 1fr;
    }
 
-   &__box-description-secondary {
+   // Логотип
+   &__box-logo {
       display: flex;
-      flex-direction: row-reverse;
+      align-items: center;
+      grid-row-start: 1;
+      grid-row-end: 3;
+   }
 
-      gap: $card-set-gap;
-      margin-bottom: $card-set-gap;
+   &__box-logo-secondary {
+      display: flex;
+      align-items: center;
+      grid-column-start: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
    }
 
    &__img-logo {
-      width: 50%;
+      width: 100%;
    }
 
+   // описаине
    &__dscr {
-      width: 50%;
+      order: 1;
+      grid-column-start: 2;
+   }
+
+   &__dscr-secondary {
+      order: 1;
+      // grid-column-start: 2;
    }
 
    // текст описания
@@ -202,115 +213,15 @@
       }
    }
 
-   // Палитра
-   // Секция 1
-   &__palette-1-1 {
-      @include palette('global-bacground', 'dark-text');
-   }
-
-   &__palette-1-2 {
-      @include palette('dark-text', 'dark-text');
-      @include positioning(absolute);
-      z-index: -1;
-      left: 140px;
-   }
-
-   // Сукция 2
-   &__palette-2-1 {
-      @include palette('section-2-1', 'section-2-1');
-      @include positioning(relative);
-      z-index: 2;
-   }
-
-   &__palette-2-2 {
-      @include palette('section-2-2', 'section-2-2');
-      @include positioning(absolute);
-      z-index: 1;
-      left: 140px;
-   }
-
-   &__palette-2-3 {
-      @include palette('white-color', 'white-color');
-      @include positioning(absolute);
-      left: 160px;
-   }
-
-   // Секуия 3
-   &__palette-3-1 {
-      @include palette('dark-text', 'global-bacground');
-      @include positioning(relative);
-      z-index: 2;
-   }
-
-   &__palette-3-2 {
-      @include palette('section-3-1', 'white-color');
-      @include positioning(absolute);
-      z-index: 1;
-      left: 140px;
-   }
-
-   // сукция 4
-   &__palette-4-1 {
-      @include palette('section-4-1', 'global-bacground');
-      @include positioning(relative);
-      z-index: 2;
-   }
-
-   &__palette-4-2 {
-      @include palette('white-color', 'global-bacground');
-      @include positioning(absolute);
-      z-index: 1;
-      left: 140px;
-   }
-
-   &__palette-4-3 {
-      @include palette('section-4-2', 'global-bacground');
-      @include positioning(absolute);
-      z-index: 0;
-      left: 160px;
-   }
-
-   // сукция 5
-   &__palette-5-1 {
-      @include palette('global-bacground', 'dark-text');
-      @include positioning();
-      z-index: 1;
-   }
-
-   &__palette-5-2 {
-      @include palette('dark-text', 'global-bacground');
-      left: 140px;
-   }
-   // сукция 6
-   &__palette-6-1 {
-      @include palette('sectyon-6-1', 'sectyon-6-1');
-      @include positioning(absolute);
-      z-index: 2;
-   }
-
-   &__palette-6-2 {
-      @include palette('global-bacground', 'global-bacground');
-      @include positioning(absolute);
-      z-index: 1;
-   }
-
-   &__palette-6-3 {
-      @include palette('dark-text', 'global-bacground');
-      left: 140px;
-   }
-   // сукция 7
-   // сукция 8
-   // сукция 9
-
    // Галлерея
    &__box-img {
       display: flex;
       justify-content: center;
-      height: 200px;
    }
 
    &__img-gallery {
       object-fit: contain;
       object-position: 50% 50%;
+      width: 100%;
    }
 }
