@@ -1,0 +1,21 @@
+.price {
+   &__title {
+      font-size: 30px;
+      line-height: 1.23;
+
+      text-align: center;
+      margin-bottom: $card-set-gap;
+   }
+
+   &__description {
+      font-size: 20px;
+      line-height: 1.4;
+
+      text-align: center;
+      margin-bottom: $card-set-gap;
+
+      &-secondary {
+         color: getColor('secondary-color');
+      }
+   }
+}

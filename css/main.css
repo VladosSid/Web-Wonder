@@ -2225,7 +2225,26 @@ a {
 }
 
 .work-process {
+  position: relative;
   background: #3a5b66;
+}
+.work-process::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(39px);
+  clip-path: polygon(50% 55%, 0 0, 100% 0);
+  background: #3a5b66;
+}
+@media screen and (min-width: 768px) {
+  .work-process::before {
+    height: 60px;
+    transform: translateY(59px);
+  }
 }
 .work-process__titel {
   font-size: 30px;
@@ -2328,4 +2347,20 @@ a {
   .work-process__descryption {
     font-size: 16px;
   }
+}
+
+.price__title {
+  font-size: 30px;
+  line-height: 1.23;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.price__description {
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.price__description-secondary {
+  color: #ff9933;
 }/*# sourceMappingURL=main.css.map */
