@@ -1,4 +1,10 @@
-@mixin buttonSecondary($colorBorder, $colorBGC, $colorText, $hoverBGC, $hoverBorder) {
+@mixin buttonSecondary(
+   $colorBorder,
+   $colorBGC,
+   $colorText,
+   $hoverBGC,
+   $hoverBorder
+) {
    text-decoration: none;
    display: flex;
    align-items: center;
@@ -16,7 +22,8 @@
    background-color: getColor($colorBGC);
    color: getColor($colorText);
 
-   transition: color $timing-function-cubic, background-color $timing-function-cubic;
+   transition: color $timing-function-cubic,
+      background-color $timing-function-cubic;
 
    &:hover,
    &:focus {
