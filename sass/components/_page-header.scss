@@ -226,7 +226,9 @@
       left: -40px;
       opacity: 0;
 
-      transition: top $timing-function-cubic, opacity $timing-function-cubic;
+      transition: top $timing-function-cubic,
+         opacity $timing-function-cubic,
+         pointer-events 1000ms;
    }
 
    @media screen and (max-width: 767px) {
@@ -248,9 +250,10 @@
       }
    }
 
-   &.is-open .nav__secondary-list {
+   &__item--position.is-open .nav__secondary-list {
       pointer-events: all;
       opacity: 1;
+      z-index: 1;
 
       top: 20px;
    }
@@ -306,7 +309,8 @@
    border: 2px solid getColor('secondary-color');
    border-radius: 8px;
 
-   transition: color $timing-function-cubic, border-color $timing-function-cubic,
+   transition: color $timing-function-cubic,
+      border-color $timing-function-cubic,
       background-color $timing-function-cubic;
 
    &:hover,
