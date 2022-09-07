@@ -227,8 +227,7 @@
       opacity: 0;
 
       transition: top $timing-function-cubic,
-         opacity $timing-function-cubic,
-         pointer-events 1000ms;
+         opacity $timing-function-cubic;
    }
 
    @media screen and (max-width: 767px) {
@@ -250,7 +249,7 @@
       }
    }
 
-   &__item--position.is-open .nav__secondary-list {
+   &.is-open .nav__secondary-list {
       pointer-events: all;
       opacity: 1;
       z-index: 1;
@@ -264,6 +263,51 @@
 
    &__secondary-item:first-child {
       margin-top: 20px;
+   }
+
+   // Таблетка + ПК вторичное меню
+   &__secondary-menu-tablet-box {
+      @include positioning(absolute);
+      pointer-events: none;
+      top: -120px;
+      left: -65%;
+      opacity: 0;
+   }
+   &__decorate {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 5px;
+      background: getColor('secondary-color');
+      clip-path: polygon(50% 45%, 45% 100%, 55% 100%);
+   }
+   &__secondary-list-tablet {
+      @extend %padding-list;
+
+      display: block;
+      background: getColor('primary-color');
+      border: 1px solid getColor('secondary-color');
+      border-radius: 10px;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      transition: top $timing-function-cubic,
+         opacity $timing-function-cubic;
+   }
+
+   &__item--position.is-open
+      .nav__secondary-menu-tablet-box {
+      pointer-events: all;
+      opacity: 1;
+      z-index: 1;
+
+      top: 15px;
+   }
+
+   &__secondary-item-tablet:not(:last-child) {
+      margin-bottom: 20px;
    }
 
    // Соцсети
