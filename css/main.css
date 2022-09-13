@@ -2135,6 +2135,8 @@ a {
 .portfolio-logo__box-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 @media screen and (min-width: 768px) {
   .portfolio-logo__box-logo {
@@ -2145,6 +2147,8 @@ a {
 .portfolio-logo__box-logo-secondary {
   display: flex;
   align-items: center;
+  justify-content: end;
+  padding: 40px;
 }
 @media screen and (min-width: 768px) {
   .portfolio-logo__box-logo-secondary {
@@ -2154,7 +2158,7 @@ a {
   }
 }
 .portfolio-logo__img-logo {
-  width: 100%;
+  width: 80%;
 }
 .portfolio-logo__dscr {
   order: 1;

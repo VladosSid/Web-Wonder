@@ -67,12 +67,19 @@
       display: grid;
       gap: $card-set-gap;
       grid-template-columns: 1fr 1fr;
+
+      // height: 500px;
+      // @include tablet() {
+      //    height: 700px;
+      // }
    }
 
    // Логотип
    &__box-logo {
       display: flex;
       align-items: center;
+      justify-content: center;
+      padding: 40px;
 
       @include tablet() {
          grid-row-start: 1;
@@ -83,6 +90,9 @@
    &__box-logo-secondary {
       display: flex;
       align-items: center;
+      justify-content: end;
+      padding: 40px;
+
       @include tablet() {
          grid-column-start: 2;
          grid-row-start: 1;
@@ -91,7 +101,7 @@
    }
 
    &__img-logo {
-      width: 100%;
+      width: 80%;
    }
 
    // описаине
